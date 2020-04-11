@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_heartrate_content"
+    android:fadingEdge="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/change_36px"
+        android:paddingTop="@dimen/change_54px"
+        android:paddingRight="@dimen/change_36px"
+        android:paddingBottom="@dimen/change_54px"
+        tools:context=".heartrate.LifeFragment">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heartrate_result_love_cnt"
+                android:textColor="@color/color_66c8e8ff"
+                android:textSize="@dimen/change_36px" />
+
+            <TextView
+                android:id="@+id/tv_constellation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cnt"
+                android:text="Novermber"
+                android:textColor="@color/color_ffbb59"
+                android:textSize="@dimen/change_36px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px">
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heartrate_result_love_age"
+                android:textColor="@color/color_66c8e8ff"
+                android:textSize="@dimen/change_36px" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/age"
+                android:text="94"
+                android:textColor="@color/color_ffbb59"
+                android:textSize="@dimen/change_36px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px">
+
+            <TextView
+                android:id="@+id/birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heartrate_result_love_birth"
+                android:textColor="@color/color_66c8e8ff"
+                android:textSize="@dimen/change_36px" />
+
+            <TextView
+                android:id="@+id/tv_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/birth"
+                android:text="94"
+                android:textColor="@color/color_ffbb59"
+                android:textSize="@dimen/change_36px" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_love_days"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+
+        <TextView
+            android:id="@+id/destined_lover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_66px"
+            android:text="@string/heartrate_result_love_lover"
+            android:textColor="@color/color_c8e8ff"
+            android:textSize="@dimen/change_42px" />
+
+        <TextView
+            android:id="@+id/tv_lover_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_18px"
+            android:lineSpacingExtra="@dimen/change_12px"
+            android:text="May 1;May 1;May 1;May 1;May 1;"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:id="@+id/soul_mate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_66px"
+            android:text="@string/heartrate_result_soul_mate"
+            android:textColor="@color/color_c8e8ff"
+            android:textSize="@dimen/change_42px" />
+
+        <TextView
+            android:id="@+id/tv_soul_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_18px"
+            android:lineSpacingExtra="@dimen/change_12px"
+            android:text="May 1;May 1;May 1;May 1;May 1;"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

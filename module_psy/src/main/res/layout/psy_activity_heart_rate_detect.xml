@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/star_bg"
+        tools:context=".heartrate.HeartRateDetectActivity">
+
+    <FrameLayout
+            android:id="@+id/heartrate_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_title_bar_transparent" />
+    </FrameLayout>
+
+
+    <FrameLayout
+            android:id="@+id/fl_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heartrate_title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/change_204px">
+
+        <com.palmapp.master.baselib.view.RoundProgress
+                android:id="@+id/progressbar_heartrate"
+                android:layout_width="@dimen/change_666px"
+                android:layout_height="@dimen/change_666px"
+                app:bgColor="@color/color_33244e75"
+                app:progressRoundWidth="@dimen/change_24px"
+                app:roundWidth="@dimen/change_76px" />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_camera"
+                android:layout_width="@dimen/change_514px"
+                android:layout_height="@dimen/change_514px"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/change_257px"
+                app:cardPreventCornerOverlap="true">
+
+            <SurfaceView
+                    android:id="@+id/heartrate_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:keepScreenOn="true"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+                android:id="@+id/rl_bpm"
+                android:layout_width="@dimen/change_514px"
+                android:layout_height="@dimen/change_514px"
+                android:layout_gravity="center"
+                android:background="@mipmap/heart_detection_pic_circle"
+                android:visibility="invisible">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                        android:id="@+id/tv_heartrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="0"
+                        android:textColor="#c4e8fe"
+                        android:textSize="@dimen/change_180px"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/iv_heart"
+                        android:layout_width="@dimen/change_102px"
+                        android:layout_height="@dimen/change_102px"
+                        android:layout_marginLeft="@dimen/change_6px"
+                        android:layout_marginTop="@dimen/change_50px"
+                        android:layout_toRightOf="@id/tv_heartrate"
+                        android:src="@mipmap/heart_pic_heart" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_heart"
+                        android:layout_marginLeft="@dimen/change_18px"
+                        android:layout_toRightOf="@id/tv_heartrate"
+                        android:text="bpm"
+                        android:textColor="#c4e8fe"
+                        android:textSize="@dimen/change_48px"
+                        android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_root"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/change_120px"
+            android:layout_marginTop="@dimen/change_114px"
+            android:layout_marginRight="@dimen/change_120px"
+            android:lineSpacingExtra="@dimen/change_12px"
+            android:text="@string/heartrate_detect_tip2"
+            android:textColor="#66c4e8fe"
+            android:textSize="@dimen/change_36px" />
+
+
+    <com.palmapp.master.module_psy.heartrate.HeartBeatView
+            android:id="@+id/iv_beats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/heart_pic_grid"
+            android:visibility="gone" />
+
+
+</RelativeLayout>

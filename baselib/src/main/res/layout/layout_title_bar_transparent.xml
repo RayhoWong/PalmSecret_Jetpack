@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/layout_titlebar"
+             android:fitsSystemWindows="true"
+             android:gravity="center_vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_168px"
+            android:orientation="horizontal"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:id="@+id/iv_titlebar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/scaning_ic_back"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/change_42px"
+                android:paddingRight="@dimen/change_42px"/>
+
+        <TextView
+                android:id="@+id/tv_titlebar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_titlebar_back"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/change_48px"
+                android:textColor="#c8e8ff"
+                />
+
+        <ImageView
+                android:id="@+id/iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:id="@+id/tv_titlebar_text"
+                android:textSize="@dimen/change_48px"
+                android:enabled="false"
+                android:textColor="@drawable/done_tv_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

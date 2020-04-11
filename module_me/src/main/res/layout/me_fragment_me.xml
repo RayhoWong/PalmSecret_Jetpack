@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/star_bg"
+            android:paddingBottom="@dimen/change_54px"
+        >
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rootView"
+            >
+
+        <com.palmapp.master.baselib.view.RoundLayout
+                android:id="@+id/me_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_366px"
+                android:background="@color/color_3336577d"
+                android:layout_margin="@dimen/change_48px"
+                app:topLeftRadius="@dimen/change_23px"
+                app:topRightRadius="@dimen/change_23px"
+                app:bottomLeftRadius="@dimen/change_23px"
+                app:bottomRightRadius="@dimen/change_23px"
+
+                >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                <ImageView
+                        android:layout_width="@dimen/change_294px"
+                        android:layout_height="@dimen/change_294px"
+                        android:id="@+id/me_constellation_img"
+                        android:src="@mipmap/me_ic_default"
+                        android:layout_marginLeft="@dimen/change_36px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                <LinearLayout
+                        android:id="@+id/layout_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/change_15px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/me_constellation_img"
+                        >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/me_name"
+                            android:textSize="@dimen/change_54px"
+                            android:textColor="@color/color_d5eafd"
+                            android:textStyle="bold"
+                            android:text="@string/info_name"
+                            android:singleLine="true"
+
+                            />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/color_66d5eafd"
+                            android:id="@+id/me_constellation"
+                            android:text="@string/info_horoscope"
+                            android:layout_marginTop="@dimen/change_15px"
+                            android:singleLine="true"
+
+                            />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/me_date"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/color_66d5eafd"
+                            android:text="2019/6/18"
+                            android:layout_marginTop="@dimen/change_15px"
+                            android:singleLine="true"
+
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/tv_no_message"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:text="@string/me_info_no_message"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/change_36px"
+                        android:lineSpacingExtra="@dimen/change_9px"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/me_constellation_img"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/me_vip_img"
+                        android:src="@mipmap/me_pic_premium"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        />
+
+
+                <ImageView
+                        android:layout_width="@dimen/change_106px"
+                        android:layout_height="@dimen/change_106px"
+                        android:id="@+id/me_edit_btn"
+                        android:src="@mipmap/me_ic_edit"
+                        android:scaleType="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+                <ImageView
+                        android:layout_width="@dimen/change_106px"
+                        android:layout_height="@dimen/change_106px"
+                        android:id="@+id/me_setting_btn"
+                        android:src="@mipmap/me_ic_setting"
+                        android:scaleType="center"
+                        android:layout_marginRight="@dimen/change_24px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/me_edit_btn"
+                        />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.palmapp.master.baselib.view.RoundLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/me_share_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/me_info_layout"
+                >
+
+            <RelativeLayout
+                    android:id="@+id/me_share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <TextView
+                        android:id="@+id/me_flag_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_48px"
+                        android:textColor="@color/color_d5eafd"
+                        android:text="@string/me_flag_title"
+                        android:layout_marginTop="@dimen/change_90px"
+                        android:layout_centerHorizontal="true"/>
+
+                <TextView
+                        android:id="@+id/me_desc_tv"
+                        android:layout_marginTop="@dimen/change_54px"
+                        android:layout_below="@id/me_flag_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_36px"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:textColor="@color/color_66d5eafd"
+                        android:textAlignment="center"
+                        android:text="@string/me_flag_des"
+                        android:layout_centerInParent="true"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/change_3px"
+                        android:layout_margin="@dimen/change_48px"
+                        android:background="@color/color_3336577d"
+                        android:layout_below="@id/me_desc_tv"
+                        />
+            </RelativeLayout>
+
+
+            <com.palmapp.master.module_me.view.LabelLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/me_circle_layout"
+                    android:layout_below="@id/me_share_layout"
+                    android:layout_marginTop="@dimen/change_54px"
+                    android:layout_marginBottom="@dimen/change_323px"
+                    >
+
+                <ImageView
+                        android:id="@+id/me_gender_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/me_pic_boy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        />
+
+                <TextView
+                        android:id="@+id/me_flag_no_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_36px"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:textColor="@color/color_66d5eafd"
+                        android:textAlignment="center"
+                        android:text="@string/me_flag_no_more_flag"
+                        app:layout_constraintTop_toBottomOf="@id/me_gender_image"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+            </com.palmapp.master.module_me.view.LabelLayout>
+
+            <FrameLayout
+                    android:id="@+id/me_blur_view"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/me_share_layout"
+                    android:layout_marginTop="@dimen/change_54px"
+                    android:layout_marginBottom="@dimen/change_123px">
+
+                <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/me_share_layout"
+                        android:src="@mipmap/me_blur"/>
+
+                <Button
+                        android:layout_gravity="center"
+                        android:id="@+id/me_tovip"
+                        android:layout_width="@dimen/change_642px"
+                        android:layout_height="@dimen/change_150px"
+                        android:text="@string/try_3free"
+                        android:background="@drawable/bg_round_gradient_theme"
+                        android:textColor="@color/white"
+                        android:layout_centerInParent="true"
+                        />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/me_share"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/me_ic_share"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_below="@id/me_info_layout"
+                android:layout_marginTop="@dimen/change_84px"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</ScrollView>
+

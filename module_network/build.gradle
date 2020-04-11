@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+   /* sourceSets {
+        debug {
+            if (isNeedNetworkModule.toBoolean()) {
+                setRoot 'src/main'
+                kotlin.srcDirs=['main/java']
+            }
+        }
+    }*/
+//    packagingOptions {
+//        exclude '**/commerceutils-svnlog.properties'
+//    }
+
+    resourcePrefix "network_"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':baselib')
+    // 必要rxandrroid依赖，切线程时需要用到
+    implementation rootProject.ext.retrofit2
+
+    // 必要retrofit依赖
+    implementation rootProject.ext.retrofit2_rxjava2
+
+    implementation rootProject.ext.okhttp3
+
+    // 必要依赖，和Rxjava结合必须用到，下面会提到
+    implementation rootProject.ext.retrofit2_gson
+
+    implementation rootProject.ext.stetho_okhttp3
+
+    kapt rootProject.ext.arouter_compiler
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

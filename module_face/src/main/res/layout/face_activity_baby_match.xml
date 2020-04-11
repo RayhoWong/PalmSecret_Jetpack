@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/star_bg"
+        android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar_transparent" />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+            <ImageView
+                    android:id="@+id/iv_face_baby_circle1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/face_baby_scan_pic_line"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.511" />
+
+
+            <com.palmapp.master.baselib.view.PalmImageView
+                    android:id="@+id/iv_face_baby_src1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/face_baby_camera_pic_mother"
+                    app:giv_shape="oval"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_circle1"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_face_baby_circle1"
+                    app:layout_constraintWidth_percent="0.472" />
+
+            <ImageView
+                    android:id="@+id/iv_face_baby_camera1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/face_baby_camera_ic_camera"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_src1"
+                    app:layout_constraintEnd_toEndOf="@id/iv_face_baby_src1" />
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_circle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_face_baby_circle1"
+                    app:layout_constraintWidth_percent="0.588">
+
+                <ImageView
+                        android:id="@+id/iv_face_baby_scan1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/face_baby_scan_pic_scan" />
+            </FrameLayout>
+
+
+            <TextView
+                    android:id="@+id/tv_mother"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/change_45px"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/face_baby_mother"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/change_42px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_face_baby_src1" />
+
+
+            <ImageView
+                    android:id="@+id/iv_face_baby_circle2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/change_64px"
+                    android:src="@mipmap/face_baby_scan_pic_line"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_mother"
+                    app:layout_constraintWidth_percent="0.511" />
+
+
+            <com.palmapp.master.baselib.view.PalmImageView
+                    android:id="@+id/iv_face_baby_src2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/face_baby_camera_pic_father"
+                    app:giv_shape="oval"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_circle2"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_face_baby_circle2"
+                    app:layout_constraintWidth_percent="0.472" />
+
+            <ImageView
+                    android:id="@+id/iv_face_baby_camera2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/face_baby_camera_ic_camera"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_src2"
+                    app:layout_constraintEnd_toEndOf="@id/iv_face_baby_src2" />
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_face_baby_circle2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_face_baby_circle2"
+                    app:layout_constraintWidth_percent="0.588">
+
+                <ImageView
+                        android:id="@+id/iv_face_baby_scan2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/face_baby_scan_pic_scan" />
+            </FrameLayout>
+
+
+            <TextView
+                    android:id="@+id/tv_father"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/change_45px"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/face_baby_father"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/change_42px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_face_baby_src2" />
+
+            <Button
+                    android:id="@+id/btn_payment_continue"
+                    android:layout_width="@dimen/change_642px"
+                    android:layout_height="@dimen/change_150px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/change_54px"
+                    android:background="@drawable/bg_round_gradient_theme"
+                    android:gravity="center"
+                    android:text="@string/pay_dialog_watch_left_ads_comfirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_48px"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_father" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</LinearLayout>

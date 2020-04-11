@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/change_90px">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/pay_two_premium_pic_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                android:id="@+id/iv_payment_close"
+                android:layout_width="@dimen/change_66px"
+                android:layout_height="@dimen/change_66px"
+                android:layout_marginLeft="@dimen/change_60px"
+                android:layout_marginTop="@dimen/change_30px"
+                android:src="@mipmap/pay_two_premium_ic_close"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_30px"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/change_15px"
+                android:paddingRight="@dimen/change_15px"
+                app:layout_constraintTop_toBottomOf="@id/iv_payment_close" />
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_payment"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_906px"
+                android:layout_marginTop="@dimen/change_30px"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/change_36px"
+                android:paddingRight="@dimen/change_36px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_payment" />
+
+
+        <LinearLayout
+                android:id="@+id/layout_payment_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_18px"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/viewpager_payment"></LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/view_payment_btn1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                android:layout_marginTop="@dimen/change_24px"
+                android:background="@drawable/pay_selector_two_btn_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_payment_indicator"
+                app:layout_constraintWidth_percent="0.85">
+
+            <ImageView
+                    android:id="@+id/iv_payment_checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    android:src="@drawable/pay_selector_two_checkbox" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="@drawable/pay_selector_two_textcolor"
+                        android:textSize="@dimen/change_48px"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_subtext1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/change_72px"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="#82cebb"
+                        android:textSize="@dimen/change_27px"
+                        android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/view_payment_btn2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:background="@drawable/pay_selector_two_btn_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_payment_btn1"
+                app:layout_constraintWidth_percent="0.85">
+
+            <TextView
+                    android:id="@+id/tv_payment_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_56px"
+                    android:layout_marginTop="-15dp"
+                    android:background="@mipmap/pay_biao"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/change_20px"
+                    android:paddingRight="@dimen/change_20px"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_30px"
+                    android:textStyle="bold" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:id="@+id/iv_payment_checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/change_66px"
+                        android:src="@drawable/pay_selector_two_checkbox" />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/change_66px"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_payment_btn_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Month: 25.99/month"
+                            android:textColor="@drawable/pay_selector_two_textcolor"
+                            android:textSize="@dimen/change_48px"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:id="@+id/tv_payment_btn_subtext2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/change_72px"
+                            android:text="1 Month: 25.99/month"
+                            android:textColor="#82cebb"
+                            android:textSize="@dimen/change_27px" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+                android:id="@+id/btn_payment_continue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:background="@drawable/bg_round_gradient_theme"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/change_60px"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_payment_btn2"
+                app:layout_constraintWidth_percent="0.85" />
+
+        <TextView
+                android:id="@+id/tv_payment_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_30px"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:textColor="#bbcece"
+                android:textSize="@dimen/change_30px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_payment_continue"
+                app:layout_constraintWidth_percent="0.85" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

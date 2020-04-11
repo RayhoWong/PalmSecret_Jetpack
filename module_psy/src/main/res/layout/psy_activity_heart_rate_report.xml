@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/star_bg"
+    tools:context=".heartrate.HeartRateReportActivity">
+
+    <include
+        android:id="@+id/layout_titlebar"
+        layout="@layout/layout_title_bar_transparent" />
+
+    <ImageView
+        android:id="@+id/iv_heart"
+        android:layout_width="@dimen/change_294px"
+        android:layout_height="@dimen/change_294px"
+        android:layout_below="@id/layout_titlebar"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:src="@mipmap/heart_report_pic_heart" />
+
+    <TextView
+        android:id="@+id/tv_ave_bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_titlebar"
+        android:layout_marginLeft="@dimen/change_18px"
+        android:layout_marginTop="@dimen/change_40px"
+        android:layout_toRightOf="@id/iv_heart"
+        android:text="88"
+        android:textColor="@color/color_c8e8ff"
+        android:textSize="@dimen/change_90px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_titlebar"
+        android:layout_marginLeft="@dimen/change_12px"
+        android:layout_marginTop="@dimen/change_95px"
+        android:layout_toRightOf="@id/tv_ave_bpm"
+        android:text="bpm"
+        android:textColor="@color/color_c8e8ff"
+        android:textSize="@dimen/change_36px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ave_bpm"
+        android:layout_marginLeft="@dimen/change_18px"
+        android:layout_marginTop="@dimen/change_21px"
+        android:layout_toRightOf="@id/iv_heart"
+        android:text="@string/heartrate_max"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px" />
+
+    <TextView
+        android:id="@+id/tv_heartrate_max"
+        android:layout_width="@dimen/change_206px"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ave_bpm"
+        android:layout_marginTop="@dimen/change_21px"
+        android:layout_toRightOf="@id/tv_max"
+        android:text=" : %1$d bpm"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px" />
+
+    <TextView
+        android:id="@+id/tv_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ave_bpm"
+        android:layout_marginLeft="@dimen/change_36px"
+        android:layout_marginTop="@dimen/change_21px"
+        android:layout_toRightOf="@id/tv_heartrate_max"
+        android:text="@string/heartrate_min"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px" />
+
+    <TextView
+        android:id="@+id/tv_heartrate_min"
+        android:layout_width="@dimen/change_206px"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ave_bpm"
+        android:layout_marginTop="@dimen/change_21px"
+        android:layout_toRightOf="@id/tv_min"
+        android:text=" : %1$d bpm"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_heart"
+        android:lineSpacingExtra="@dimen/change_12px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginTop="@dimen/change_21px"
+        android:text="@string/heartrate_result_health_1"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px" />
+
+    <LinearLayout
+        android:id="@+id/ll_switch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/change_96px"
+        android:layout_marginTop="@dimen/change_48px"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_result">
+
+        <TextView
+            android:id="@+id/tv_life"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/cnt_selector_day_bg"
+            android:textSize="@dimen/change_36px"
+            android:textColor="@drawable/cnt_selector_day_text_color"
+            android:text="@string/heartrate_life"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_love"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/change_30px"
+            android:background="@drawable/cnt_selector_day_bg"
+            android:textSize="@dimen/change_36px"
+            android:textColor="@drawable/cnt_selector_day_text_color"
+            android:text="@string/heartrate_love"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/ll_switch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/change_48px">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_heartrate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/change_48px"
+            android:paddingRight="@dimen/change_48px"/>
+
+
+        <com.palmapp.master.baselib.view.PalmBlurView
+            android:id="@+id/heartrate_blur"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

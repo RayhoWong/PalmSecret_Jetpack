@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.palmapp.master.module_tarot">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application>
+
+        <!-- 每日塔罗 -->
+        <activity android:name=".activity.DailyTarotActivity"/>
+        <!-- 塔罗话题 寻找真爱 -->
+        <activity android:name=".activity.TopicLoveActivity"/>
+        <!-- 塔罗话题 职业 -->
+        <activity android:name=".activity.TopicCareerActivity"/>
+    </application>
+
+</manifest>

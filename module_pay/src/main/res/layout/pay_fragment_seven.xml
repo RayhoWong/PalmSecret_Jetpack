@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/change_90px">
+
+        <com.palmapp.master.baselib.view.WrapContentViewPager
+                android:id="@+id/viewpager_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                android:clipToPadding="false"
+                app:layout_goneMarginTop="@dimen/change_186px"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                app:layout_constraintDimensionRatio="1080:798"
+                android:layout_height="0dp"/>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/pay_five_bg"
+                app:layout_constraintBottom_toBottomOf="@id/viewpager_payment"
+                app:layout_constraintDimensionRatio="1080:136"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+                android:id="@+id/iv_payment_close"
+                android:layout_width="@dimen/change_66px"
+                android:layout_height="@dimen/change_66px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:layout_marginRight="@dimen/change_60px"
+                android:src="@mipmap/pay_seven_premium_ic_close"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_payment_title1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Access all features"
+                android:gravity="center"
+                app:layout_constraintWidth_max="wrap"
+                android:textColor="#84a7a2"
+                android:textSize="@dimen/change_60px"
+                android:layout_marginTop="@dimen/change_72px"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/btn_payment_continue"
+                app:layout_constraintStart_toStartOf="@id/btn_payment_continue"
+                app:layout_constraintTop_toBottomOf="@id/viewpager_payment" />
+
+        <com.palmapp.master.baselib.view.GradientColorTextView
+                android:id="@+id/tv_payment_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_27px"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                app:layout_constraintWidth_max="wrap"
+                android:text="FOR FREE"
+                android:textColor="#0bc88c"
+                android:textSize="@dimen/change_66px"
+                android:textStyle="bold"
+                app:endColor="#187edc"
+                app:layout_constraintEnd_toEndOf="@id/btn_payment_continue"
+                app:layout_constraintStart_toStartOf="@id/btn_payment_continue"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_title1"
+                app:startColor="#0bc88c" />
+
+
+        <com.palmapp.master.baselib.view.AlignTopTextView
+                android:id="@+id/tv_payment_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:gravity="center"
+                android:textColor="#84a7a2"
+                android:textSize="@dimen/change_48px"
+                app:drawableLeft="@mipmap/pay_seven_premium_ic_crown"
+                app:drawablePadding="@dimen/change_21px"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintEnd_toEndOf="@id/btn_payment_continue"
+                app:layout_constraintStart_toStartOf="@id/btn_payment_continue"
+                android:layout_marginTop="@dimen/change_48px"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_title2">
+
+        </com.palmapp.master.baselib.view.AlignTopTextView>
+        <Button
+                android:id="@+id/btn_payment_continue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_192px"
+                android:layout_marginTop="@dimen/change_66px"
+                android:background="@drawable/bg_round_gradient_theme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_content"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/change_57px"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintWidth_percent="0.85"/>
+
+        <FrameLayout
+                android:id="@+id/layout_payment_month"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_payment_continue"
+                app:layout_constraintWidth_percent="0.85"
+                android:layout_marginTop="@dimen/change_60px"
+                android:background="@drawable/pay_selector_seven_btn_bg">
+            <TextView
+                    android:id="@+id/tv_payment_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/change_57px"
+                    android:textColor="#00ab89"
+                    android:textStyle="bold"
+                    android:text="Continue"
+                    android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/tv_payment_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_45px"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/change_12px"
+                android:textColor="#abc4c1"
+                android:text="1231231"
+                android:textSize="@dimen/change_33px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_payment_month"
+                app:layout_constraintWidth_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

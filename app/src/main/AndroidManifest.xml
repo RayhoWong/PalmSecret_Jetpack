@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.palmapp.master">
+
+    <application
+            android:name=".MainApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:label="@string/app_app_name"
+            android:networkSecurityConfig="@xml/network_security_config"
+            tools:replace="android:label">
+        <meta-data
+                android:name="channel"
+                android:value="${CHANNEL}" />
+        <meta-data
+                android:name="AbUser"
+                android:value="${ABUSER}" />
+        <meta-data
+                android:name="openLog"
+                android:value="${OPENLOG}" />
+        <meta-data
+                android:name="svn"
+                android:value="${SVN}" />
+        <activity
+                android:name=".launcher.LauncherActivity"
+                android:theme="@style/AppTheme.StartUp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".infomation.InfoActivity"
+                android:theme="@style/AppTheme.Fullscreen"></activity>
+        <activity android:name=".main.MainActivity"/>
+    </application>
+
+</manifest>

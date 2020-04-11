@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+            ndk {
+                abiFilters "armeabi-v7a","arm64-v8a"
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            renderscript.srcDirs = ['src/main/rs']
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []           //disable automatic ndk-build call
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':module_stasm')
+
+    api 'com.google.firebase:firebase-core:17.2.2'
+    api 'com.google.firebase:firebase-ml-vision:24.0.1'
+    api 'com.google.firebase:firebase-ml-vision-face-model:19.0.0'
+}
+

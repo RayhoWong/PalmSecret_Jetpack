@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/star_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/face_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_title_bar_transparent" />
+
+
+        <ImageView
+            android:id="@+id/iv_gif"
+            android:layout_width="@dimen/change_72px"
+            android:layout_height="@dimen/change_72px"
+            android:visibility="invisible"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/change_48px"
+            android:src="@mipmap/old_result_ic_gif" />
+
+        <View
+            android:id="@+id/tv_point"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/change_45px"
+            android:layout_marginRight="@dimen/change_46px"
+            android:background="@drawable/bg_red_point"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/face_bottom_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_180px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/change_198px">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <Button
+                        android:id="@+id/face_50s"
+                        android:layout_width="@dimen/change_240px"
+                        android:layout_height="@dimen/change_120px"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/face_old_select"
+                        android:text="@string/face_btn_50s"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/face_70s"
+                        android:layout_width="@dimen/change_240px"
+                        android:layout_height="@dimen/change_120px"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/face_old_select"
+                        android:text="@string/face_btn_70s"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/face_90s"
+                        android:layout_width="@dimen/change_240px"
+                        android:layout_height="@dimen/change_120px"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/face_old_select"
+                        android:text="@string/face_btn_90s"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.palmapp.master.baselib.view.RoundLayout
+                android:id="@+id/packed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/face_bottom_container"
+                android:layout_margin="@dimen/change_60px"
+                app:radius="@dimen/change_24px">
+
+                <ImageView
+                    android:id="@+id/face_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <com.palmapp.master.baselib.view.PalmBlurView
+                    android:id="@+id/face_old_blur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible">
+
+
+                </com.palmapp.master.baselib.view.PalmBlurView>
+
+
+            </com.palmapp.master.baselib.view.RoundLayout>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/layout_share"
+            layout="@layout/layout_like_n_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/change_60px"
+            android:visibility="invisible" />
+
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/face_layout_old_pay" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_ticktok"
+            android:layout_width="@dimen/change_690px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/change_60px"
+            android:background="@drawable/bg_round_old_ticktock"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_close_ticktok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="@dimen/change_30px"
+                android:src="@mipmap/old_result_dialog_ic_cancel" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/change_30px"
+                android:layout_marginTop="@dimen/change_27px"
+                android:layout_marginRight="@dimen/change_30px"
+                android:layout_marginBottom="@dimen/change_66px"
+                android:lineSpacingExtra="@dimen/change_12px"
+                android:text="@string/dialog_oldgif_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/change_36px" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

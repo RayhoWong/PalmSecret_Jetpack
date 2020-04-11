@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- icon与BottomNavigationView顶部的距离 -->
+    <dimen tools:override="true" name="app_design_bottom_navigation_margin">@dimen/change_40px</dimen>
+    <!--&lt;!&ndash;禁用BottomNavigationView 的文字大小变化动画效果&ndash;&gt;-->
+    <!--&lt;!&ndash; text大小 &ndash;&gt;-->
+    <!--<dimen tools:override="true" name="design_bottom_navigation_text_size">@dimen/change_30px</dimen>-->
+    <!--&lt;!&ndash; text大小 &ndash;&gt;-->
+    <!--<dimen tools:override="true" name="design_bottom_navigation_active_text_size">@dimen/change_30px</dimen>-->
+
+
+
+</resources>

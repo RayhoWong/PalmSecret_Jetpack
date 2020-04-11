@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/diamond_bg"
+            android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginTop="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:orientation="horizontal">
+
+            <com.palmapp.master.baselib.view.PalmImageView
+                    android:id="@+id/iv_palm_title"
+                    android:layout_width="@dimen/change_390px"
+                    android:layout_height="@dimen/change_390px"
+                    android:scaleType="centerCrop"
+                    app:giv_radius="@dimen/change_24px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_390px"
+                    android:layout_marginLeft="@dimen/change_39px">
+
+                <TextView
+                        android:id="@+id/tv_palm_width"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_result_ic_width"
+                        android:drawablePadding="@dimen/change_30px"
+                        android:gravity="center"
+                        android:text="Palm Width 2"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="@dimen/change_36px"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/tv_palm_length"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                <TextView
+                        android:id="@+id/tv_palm_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_result_ic_palmlength"
+                        android:drawablePadding="@dimen/change_30px"
+                        android:gravity="center"
+                        android:text="Palm Length 2"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="@dimen/change_36px"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/tv_finger_length"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palm_width" />
+
+                <TextView
+                        android:id="@+id/tv_finger_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_result_ic_fingerlength"
+                        android:drawablePadding="@dimen/change_30px"
+                        android:gravity="center"
+                        android:text="Finger Length 2"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="@dimen/change_36px"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palm_length" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/layout_portrait"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/change_240px"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginTop="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:layout_marginBottom="@dimen/change_66px"
+                        android:background="@drawable/palm_bg_countdown"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <com.palmapp.master.baselib.view.PalmImageView
+                            android:id="@+id/iv_palm_countdown"
+                            android:layout_width="@dimen/change_162px"
+                            android:layout_height="@dimen/change_162px"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/change_48px"
+                            android:src="@mipmap/palm_portrait_1"
+                            app:giv_shape="oval" />
+
+                    <TextView
+                            android:id="@+id/tv_palm_countdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/change_48px"
+                            android:layout_marginRight="@dimen/change_48px"
+                            android:lineSpacingExtra="@dimen/change_9px"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/change_36px"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <include
+                        android:id="@+id/layout_life_line"
+                        layout="@layout/palm_item_result_palmresult" />
+
+                <include
+                        android:id="@+id/layout_business_line"
+                        layout="@layout/palm_item_result_palmresult" />
+
+                <include
+                        android:id="@+id/layout_love_line"
+                        layout="@layout/palm_item_result_palmresult" />
+
+                <include
+                        android:id="@+id/layout_money_line"
+                        layout="@layout/palm_item_result_palmresult" />
+
+                <include
+                        android:id="@+id/layout_marry_line"
+                        layout="@layout/palm_item_result_palmresult" />
+            </LinearLayout>
+
+            <FrameLayout
+                    android:id="@+id/bv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:visibility="gone">
+
+                <com.github.mmin18.widget.RealtimeBlurView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:realtimeBlurRadius="15dp"
+                        app:realtimeOverlayColor="#00000000" />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/change_180px"
+                        android:orientation="vertical">
+
+                    <Button
+                            android:id="@+id/btn_pay"
+                            android:layout_width="@dimen/change_642px"
+                            android:layout_height="@dimen/change_150px"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/change_24px"
+                            android:background="@drawable/bg_round_gradient_theme"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/go_premium"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                    <LinearLayout
+                            android:id="@+id/btn_pay_watch"
+                            android:layout_width="@dimen/change_642px"
+                            android:layout_height="@dimen/change_150px"
+                            android:background="@drawable/bg_round_translucent_theme"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+                                android:text="@string/pay_watch_ads_title"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/change_45px" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_watch_ads_sub_title"
+                                android:textColor="#80c8e8ff"
+                                android:textSize="@dimen/change_30px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

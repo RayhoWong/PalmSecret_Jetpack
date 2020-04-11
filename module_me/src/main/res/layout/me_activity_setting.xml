@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:id="@+id/layout_root"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:paddingRight="@dimen/change_76px"
+                                                   android:focusable="true"
+                                                   android:background="@mipmap/star_bg">
+
+    <RelativeLayout
+            android:id="@+id/me_setting_titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    >
+        <include layout="@layout/layout_title_bar_transparent"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/me_setting_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:text="@string/setting_privacy"
+            android:textSize="@dimen/change_42px"
+            android:gravity="center_vertical"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/me_setting_titlebar_layout"/>
+
+
+
+    <TextView
+            android:id="@+id/me_setting_terms"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:textSize="@dimen/change_42px"
+            android:text="@string/setting_term"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/change_30px"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintTop_toBottomOf="@id/me_setting_privacy"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <TextView
+            android:id="@+id/me_setting_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:text="@string/setting_feedback"
+            android:textSize="@dimen/change_42px"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/change_30px"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintTop_toBottomOf="@id/me_setting_terms"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

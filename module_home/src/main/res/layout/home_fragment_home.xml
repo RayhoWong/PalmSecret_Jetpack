@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/star_bg"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/change_284px"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_96px"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collasping_toolbar_layout"
+                android:layout_width="@dimen/change_984px"
+                android:layout_height="@dimen/change_540px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                app:statusBarScrim="@color/transparent"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:fitsSystemWindows="true">
+
+            <androidx.cardview.widget.CardView
+                android:fitsSystemWindows="true"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/change_24px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    app:banner_indicatorGravity="left"
+                    app:banner_pointAutoPlayInterval="5000"
+                    app:banner_pageChangeDuration="5000"
+                    app:banner_pointAutoPlayAble="true"
+                    app:banner_pointContainerBackground="@android:color/transparent"
+                    app:banner_pointDrawable="@drawable/home_bga_banner_selector_point2"
+                    app:banner_pointContainerLeftRightPadding="@dimen/change_42px"
+                    app:banner_pointLeftRightMargin="@dimen/change_18px"
+                    app:banner_pointTopBottomMargin="@dimen/change_42px"
+                    android:fitsSystemWindows="true"/>
+
+<!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_210px"
+                    android:layout_marginBottom="@dimen/change_100px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_banner_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/change_60px"
+                        android:text="Since the release"
+                        android:textStyle="bold|italic"/>
+
+                    <TextView
+                        android:id="@+id/tv_banner_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/change_9px"
+                        android:layout_marginTop="@dimen/change_24px"
+                        android:textColor="#99ffffff"
+                        android:textSize="@dimen/change_36px"
+                        android:text="As of February 2018,the books have sold more than 500 million copies worldwide them"/>
+                </LinearLayout>-->
+
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_261px"
+                app:tabMaxWidth="@dimen/change_240px"
+                app:tabMinWidth="@dimen/change_24px"
+                app:tabPaddingEnd="@dimen/change_24px"
+                app:tabPaddingStart="@dimen/change_24px"
+                app:tabPaddingBottom="@dimen/change_24px"
+                app:tabMode="scrollable"
+                app:tabIndicator="@drawable/home_pic_triangle"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorColor="#c8e8ff"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/change_3px"
+              android:background="#33244e75"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

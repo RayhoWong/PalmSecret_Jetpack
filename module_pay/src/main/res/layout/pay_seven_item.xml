@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.AlignTopTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/change_9px"
+        android:textColor="#84a7a2"
+        android:textSize="@dimen/change_48px"
+        app:drawableLeft="@mipmap/pay_seven_premium_ic_crown"
+        app:drawablePadding="@dimen/change_21px">
+
+</com.palmapp.master.baselib.view.AlignTopTextView>

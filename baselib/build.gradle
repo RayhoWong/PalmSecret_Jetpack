@@ -1,0 +1,88 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            consumerProguardFiles('proguard-rules.pro', 'retrofit2.pro')
+        }
+    }
+
+
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'androidx.appcompat:appcompat:1.0.2'
+    api 'com.google.android.material:material:1.1.0-alpha01'
+    api 'androidx.core:core-ktx:1.0.2'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+    api 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.tencent:mmkv:1.0.18'
+    api 'org.greenrobot:eventbus:3.1.1'
+    //banner
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'cn.bingoogolapple:bga-banner:2.2.6@aar'
+    //glide
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    kapt 'com.github.bumptech.glide:compiler:4.8.0'
+    //图片变换的处理
+    api 'jp.wasabeef:glide-transformations:4.0.0'
+    api rootProject.ext.androidx_core
+    api rootProject.ext.rxjava2
+    api rootProject.ext.rxjava2_android
+    api rootProject.ext.arouter_api
+    kapt rootProject.ext.arouter_compiler
+    api(name: 'statistics-com.palmsecret.horoscope-release-v1.60', ext: 'aar')
+    api(name: 'BuyChannelSdk-trunk-v1.9-r199730-AF-5.0', ext: 'aar')
+    api(name: 'ProcessDaemonSdk-trunk-v1.6-r185388', ext: 'aar')
+    api 'com.base.http:http:1.0.8'
+//    api 'com.trello.rxlifecycle2:rxlifecycle-kotlin:2.1.0'
+//    api 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle-kotlin:2.1.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api 'com.github.mmin18:realtimeblurview:1.2.1'
+    api 'com.amazonaws:aws-android-sdk-s3:2.12.1'
+    api('com.amazonaws:aws-android-sdk-mobile-client:2.12.1@aar') { transitive = true }
+    api('com.amazonaws:aws-android-sdk-auth-userpools:2.12.1@aar') { transitive = true }
+    api 'com.jude:rollviewpager:1.4.6'
+    api 'com.applovin:applovin-sdk:9.11.2'
+
+    api 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.12.1'
+    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.12.1@aar') { transitive = true }
+    implementation('com.amazonaws:aws-android-sdk-auth-userpools:2.12.1@aar') { transitive = true }
+
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+
+    //国产手机好用的权限管理库
+    api 'com.yanzhenjie.permission:x:2.0.1'
+
+
+    implementation project(':module_oldlib')
+    implementation project(':module_stasm')
+
+
+}

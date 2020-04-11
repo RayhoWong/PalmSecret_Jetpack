@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_66theme"
+                android:layout_marginTop="@dimen/change_42px">
+
+    <TextView
+            android:id="@+id/tv_psyquizresult_item_title"
+            android:layout_marginLeft="@dimen/change_36px"
+            android:layout_marginRight="@dimen/change_36px"
+            android:layout_marginTop="@dimen/change_36px"
+            android:layout_marginBottom="@dimen/change_18px"
+            android:layout_toLeftOf="@id/iv_psyquizresult_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/change_42px"/>
+
+    <TextView
+            android:id="@+id/tv_psyquizresult_item_content"
+            android:layout_marginLeft="@dimen/change_36px"
+            android:layout_marginRight="@dimen/change_36px"
+            android:layout_marginBottom="@dimen/change_36px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/change_9px"
+            android:textColor="@color/_66theme_text_color"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_toLeftOf="@id/iv_psyquizresult_item"
+            android:layout_below="@id/tv_psyquizresult_item_title"
+            android:textSize="@dimen/change_36px"/>
+
+    <com.palmapp.master.baselib.view.PalmImageView
+            android:id="@+id/iv_psyquizresult_item"
+            android:layout_width="@dimen/change_240px"
+            android:layout_height="@dimen/change_240px"
+            android:scaleType="centerCrop"
+            app:giv_radius_right_top="@dimen/change_28px"
+            app:giv_radius_right_bottom="@dimen/change_28px"
+            android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            >
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layout_content"
+                android:layout_alignBottom="@id/layout_content"
+                android:background="@mipmap/star_bg"
+                />
+
+        <LinearLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/change_48px"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                        android:id="@+id/iv_me"
+                        android:layout_width="@dimen/change_216px"
+                        android:layout_height="@dimen/change_216px"
+                        android:src="@mipmap/ic_gemini"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_54px"
+                            android:textColor="@color/theme_text_color"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            app:layout_constraintTop_toTopOf="@id/iv_me"
+                            android:text="Tom Sawyer"
+                            app:layout_constraintBottom_toTopOf="@id/tv_user_cnt"
+                            app:layout_constraintStart_toEndOf="@id/iv_me"
+                            android:layout_marginLeft="@dimen/change_18px"/>
+
+                    <TextView
+                            android:id="@+id/tv_user_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"
+                            app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+                            app:layout_constraintStart_toEndOf="@id/iv_me"
+                            android:text="Gemini"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_me"
+                            android:layout_marginLeft="@dimen/change_18px"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_3px"
+                    android:layout_marginTop="@dimen/change_48px"
+                    app:layout_constraintTop_toBottomOf="@id/iv_me"
+                    android:background="@color/_33theme_bg"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/change_36px">
+
+                <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Love"
+                        android:textSize="@dimen/change_36px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/rb_cntdaily_item_love"
+                        app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_love"
+                        app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_love"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:textColor="#c8e8ff"/>
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_cntdaily_item_love"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_65px"
+                        android:layout_marginLeft="@dimen/change_30px"
+                        app:layout_constraintStart_toEndOf="@id/tv1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:progressDrawable="@drawable/cnt_ratingbar_love"/>
+
+                <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health"
+                        android:textSize="@dimen/change_36px"
+                        app:layout_constraintEnd_toEndOf="@id/tv1"
+                        app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_health"
+                        app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_health"
+                        android:textColor="#c8e8ff"/>
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_cntdaily_item_health"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_65px"
+                        android:layout_marginTop="@dimen/change_36px"
+                        app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_love"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:progressDrawable="@drawable/cnt_ratingbar_health"
+                        app:layout_constraintStart_toStartOf="@+id/rb_cntdaily_item_love"/>
+
+                <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wealth"
+                        android:textSize="@dimen/change_36px"
+                        app:layout_constraintEnd_toEndOf="@id/tv1"
+                        app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_wealth"
+                        app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_wealth"
+                        android:textColor="#c8e8ff"/>
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_cntdaily_item_wealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_65px"
+                        app:layout_constraintStart_toStartOf="@id/rb_cntdaily_item_love"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_health"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:progressDrawable="@drawable/cnt_ratingbar_wealth"/>
+
+                <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career"
+                        android:textSize="@dimen/change_36px"
+                        app:layout_constraintEnd_toEndOf="@id/tv1"
+                        app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_career"
+                        app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_career"
+                        android:textColor="#c8e8ff"/>
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_cntdaily_item_career"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_65px"
+                        app:layout_constraintStart_toStartOf="@id/rb_cntdaily_item_love"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_wealth"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:progressDrawable="@drawable/cnt_ratingbar_career"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_3px"
+                    android:background="@color/_33theme_bg"
+                    android:layout_marginTop="@dimen/change_36px"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cntmatching_me"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/change_48px"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:text="Palm Secret"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/change_42px"
+                        android:textColor="@color/theme_text_color"
+                        app:layout_constraintTop_toTopOf="@+id/cnt_imageview"
+                        app:layout_constraintBottom_toBottomOf="@+id/cnt_imageview"
+                        app:layout_constraintEnd_toStartOf="@+id/cnt_imageview"
+                        android:layout_marginRight="@dimen/change_42px"/>
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:layout_width="@dimen/change_120px"
+                        android:layout_height="@dimen/change_120px"
+                        android:src="@mipmap/ic_launcher"
+                        app:giv_radius="@dimen/change_24px"
+                        android:id="@+id/cnt_imageview"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

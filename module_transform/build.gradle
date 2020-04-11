@@ -1,0 +1,71 @@
+if (!isNeedTransformModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        if (!isNeedTransformModule.toBoolean()) {
+            applicationId "com.palmapp.master.module_transform"
+        }
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion
+        //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+    sourceSets {
+        debug {
+            if (isNeedTransformModule.toBoolean()) {
+                setRoot 'src/main'
+                kotlin.srcDirs = ['main/java']
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude '**/commerceutils-svnlog.properties'
+    }
+    resourcePrefix "transform_"
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation project(':baselib')
+    implementation project(':module_network')
+    implementation project(':module_camera')
+    implementation project(':module_imageloader')
+    implementation project(':module_oldlib')
+    implementation project(':module_ad')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt rootProject.ext.arouter_compiler
+}

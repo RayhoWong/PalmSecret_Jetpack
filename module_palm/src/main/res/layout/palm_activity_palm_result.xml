@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/diamond_bg">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_palmscan_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                />
+        <com.palmapp.master.baselib.view.PalmBlurView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bv_palmresult">
+        </com.palmapp.master.baselib.view.PalmBlurView>
+        <ViewStub
+                android:id="@+id/viewstub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/palm_layout_palmresult_pay"/>
+    </FrameLayout>
+
+</LinearLayout>

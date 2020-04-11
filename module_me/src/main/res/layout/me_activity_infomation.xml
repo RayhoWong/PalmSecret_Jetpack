@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:id="@+id/layout_root"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:focusable="true"
+                                                   android:background="@mipmap/star_bg">
+
+    <RelativeLayout
+            android:id="@+id/me_porfile_titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/layout_title_bar_transparent"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/me_hint_name"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/color_33c8e8ff"
+            android:text="@string/info_name"
+            android:textSize="@dimen/change_30px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_30px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/me_porfile_titlebar_layout"/>
+
+    <EditText
+            android:maxLength="20"
+            android:id="@+id/me_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:hint="@string/info_name"
+            android:textSize="@dimen/change_42px"
+            android:gravity="center_vertical"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:singleLine="true"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/me_hint_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/me_hint_birthday"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/color_33c8e8ff"
+            android:textSize="@dimen/change_30px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_30px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:text="@string/info_birthday"
+            app:layout_constraintTop_toBottomOf="@id/me_et_name"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <TextView
+            android:id="@+id/me_et_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:textSize="@dimen/change_42px"
+            android:text="2019-05-01"
+            android:gravity="center_vertical"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintTop_toBottomOf="@id/me_hint_birthday"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               app:layout_constraintTop_toTopOf="@id/me_et_birthday"
+               app:layout_constraintRight_toRightOf="@id/me_et_birthday"
+               app:layout_constraintBottom_toBottomOf="@id/me_et_birthday"
+               android:src="@mipmap/me_information_ic_more"
+    />
+
+    <TextView
+            android:id="@+id/me_hint_constellation"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/color_33c8e8ff"
+            android:textSize="@dimen/change_30px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_30px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:text="@string/info_horoscope"
+            app:layout_constraintTop_toBottomOf="@id/me_et_birthday"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+            android:id="@+id/me_et_constellation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_108px"
+            android:text="Temp"
+            android:textSize="@dimen/change_42px"
+            android:gravity="center_vertical"
+            android:background="@drawable/me_shape_underline"
+            android:textColor="@color/color_d5ebfd"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            app:layout_constraintTop_toBottomOf="@id/me_hint_constellation"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <TextView
+            android:id="@+id/me_hint_gender"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/color_33c8e8ff"
+            android:textSize="@dimen/change_30px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_30px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:text="@string/info_gender"
+            app:layout_constraintTop_toBottomOf="@id/me_et_constellation"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+            android:id="@+id/me_tv_male"
+            android:layout_width="@dimen/change_270px"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/change_36px"
+            android:textColor="@color/color_d5ebfd"
+            android:textSize="@dimen/change_36px"
+            android:drawableLeft="@drawable/me_selector_info_gender"
+            android:text="@string/info_male"
+            app:layout_constraintStart_toStartOf="@id/me_hint_gender"
+            app:layout_constraintTop_toBottomOf="@+id/me_hint_gender"
+            android:layout_marginTop="@dimen/change_30px"/>
+
+    <TextView
+            android:id="@+id/me_tv_female"
+            android:layout_width="@dimen/change_270px"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/change_36px"
+            android:textColor="@color/color_d5ebfd"
+            android:textSize="@dimen/change_36px"
+            android:drawableLeft="@drawable/me_selector_info_gender"
+            android:text="@string/info_female"
+            android:layout_marginLeft="@dimen/change_30px"
+            app:layout_constraintStart_toEndOf="@id/me_tv_male"
+            app:layout_constraintTop_toBottomOf="@+id/me_hint_gender"
+            android:layout_marginTop="@dimen/change_30px"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

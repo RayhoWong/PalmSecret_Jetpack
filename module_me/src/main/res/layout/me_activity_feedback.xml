@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@mipmap/star_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar_transparent"/>
+
+    <com.palmapp.master.baselib.view.RoundLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/change_48px"
+            android:background="@color/color_1a244e75"
+            app:radius="@dimen/change_24px"
+    >
+
+
+        <EditText
+                android:id="@+id/me_setting_feedback_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_900px"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="@string/setting_feedback_hint"
+                android:inputType="textMultiLine"
+                android:textColor="@color/color_c8e8ff"
+                android:textColorHint="@color/color_33c8e8ff"
+                android:padding="@dimen/change_36px"
+        />
+
+    </com.palmapp.master.baselib.view.RoundLayout>
+
+</LinearLayout>

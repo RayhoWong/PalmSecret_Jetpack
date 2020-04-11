@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_36px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px">
+
+    <com.palmapp.master.baselib.view.PalmImageView
+            android:id="@+id/iv_palmchat_portrait"
+            android:layout_width="wrap_content"
+            app:giv_shape="oval"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/palm_portrait_1"/>
+
+    <FrameLayout
+            android:id="@+id/layout_palmchat_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_palmchat_portrait"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_24px"
+            android:background="@drawable/palm_bg_round_66theme"
+            android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/tv_palmchat_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@color/_66theme_text_color"
+                android:text="The Hand of Emperor The Hand of Emperor The Hand"
+                android:layout_marginLeft="@dimen/change_36px"
+                android:layout_marginRight="@dimen/change_36px"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:layout_marginTop="@dimen/change_36px"
+                android:layout_marginBottom="@dimen/change_36px"/>
+    </FrameLayout>
+</LinearLayout>

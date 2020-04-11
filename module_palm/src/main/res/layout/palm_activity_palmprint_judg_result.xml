@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/diamond_bg">
+
+    <include
+            android:id="@+id/lt_title_bar"
+            layout="@layout/layout_title_bar"/>
+
+    <LinearLayout
+            android:id="@+id/ll_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_48px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:text="Love line"
+                android:textSize="@dimen/change_42px"
+                android:textColor="@color/theme_text_color"/>
+
+        <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_48px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_marginBottom="@dimen/change_60px"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:text="Love line Love line Love line Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Loveline Love line Love line,Love lineLove lineLove lineLove line Love lineLove line,Love line"
+                android:textSize="@dimen/change_36px"
+                android:textColor="#66c8e8ff"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_result_blur"
+            android:layout_below="@id/lt_title_bar"
+            android:background="@mipmap/palm_result_blur"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/change_12px"
+            android:layout_marginBottom="@dimen/change_12px"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_546px">
+
+        <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="@dimen/change_642px"
+                android:layout_height="@dimen/change_150px"
+                android:gravity="center"
+                android:text="@string/go_premium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/change_48px"
+                android:background="@drawable/bg_round_gradient_theme"/>
+        <LinearLayout
+                android:id="@+id/btn_pay_watch"
+                android:layout_width="@dimen/change_642px"
+                android:layout_height="@dimen/change_150px"
+                android:layout_marginTop="@dimen/change_24px"
+                android:background="@drawable/bg_round_translucent_theme"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/pay_watch_ads_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_45px" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_watch_ads_sub_title"
+                    android:textColor="#80c8e8ff"
+                    android:textSize="@dimen/change_30px" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+            android:src="@mipmap/palm_result_pic_line"
+            android:layout_width="@dimen/change_540px"
+            android:layout_height="@dimen/change_6px"
+            android:layout_marginLeft="@dimen/change_48px"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_48px"
+            android:text="@string/recommend"
+            android:textStyle="bold"
+            android:textSize="@dimen/change_45px"
+            android:textColor="@color/theme_text_color"/>
+
+    <com.palmapp.master.baselib.view.NetworkStateView
+            android:id="@+id/palm_loading"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/change_48px"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/change_75px"/>
+</LinearLayout>

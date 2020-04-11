@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/change_90px">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/pay_two_premium_pic_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Space
+                android:id="@+id/gl1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/change_38px"
+                app:layout_constraintStart_toStartOf="@id/layout_payment_src"
+                app:layout_constraintTop_toTopOf="@id/layout_payment_src" />
+
+        <ImageView
+                android:id="@+id/iv_payment_close"
+                android:layout_width="@dimen/change_66px"
+                android:layout_height="@dimen/change_66px"
+                android:layout_marginLeft="@dimen/change_60px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:src="@mipmap/pay_two_premium_ic_close"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_payment_title1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_150px"
+                android:layout_marginTop="@dimen/change_84px"
+                android:layout_marginRight="@dimen/change_150px"
+                android:gravity="center"
+                android:text="GET YOUR FREE TRIAL NOW!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/change_72px"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <com.palmapp.master.baselib.view.RoundLayout
+                android:id="@+id/layout_payment_src"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_payment_oldman"
+                app:layout_constraintWidth_percent="0.85"
+                app:radius="@dimen/change_36px">
+
+            <ImageView
+                    android:id="@+id/iv_payment_src"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            <com.github.mmin18.widget.RealtimeBlurView
+                    android:id="@+id/bv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:realtimeBlurRadius="15dp"
+                    app:realtimeOverlayColor="#00000000" />
+
+        </com.palmapp.master.baselib.view.RoundLayout>
+
+        <ImageView
+                android:id="@+id/iv_payment_oldman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_132px"
+                android:layout_marginTop="@dimen/change_36px"
+                android:src="@mipmap/pay_third_premium_pic_oldman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_title1" />
+
+        <ImageView
+                android:id="@+id/iv_payment_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_36px"
+                android:src="@mipmap/pay_third_premium_hand"
+                app:layout_constraintBottom_toTopOf="@id/gl1"
+                app:layout_constraintStart_toStartOf="@id/iv_payment_oldman" />
+
+        <TextView
+                android:id="@+id/tv_main_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_102px"
+                android:layout_marginTop="@dimen/change_54px"
+                android:layout_marginRight="@dimen/change_102px"
+                android:lineSpacingExtra="@dimen/change_12px"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#3ab6b3"
+                android:textSize="@dimen/change_42px"
+                app:layout_constraintTop_toBottomOf="@id/layout_payment_src" />
+
+        <FrameLayout
+                android:id="@+id/btn_payment_continue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:background="@drawable/bg_round_gradient_theme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_main_text"
+                app:layout_constraintWidth_percent="0.85">
+
+            <TextView
+                    android:id="@+id/tv_payment_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Continue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_60px"
+                    android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/tv_payment_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_30px"
+                android:gravity="center"
+                android:textColor="#82cebb"
+                android:textSize="@dimen/change_33px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_payment_continue"
+                app:layout_constraintWidth_percent="0.85" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

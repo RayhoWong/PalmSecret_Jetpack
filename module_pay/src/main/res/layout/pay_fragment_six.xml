@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.RoundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bottomLeftRadius="@dimen/change_30px"
+        app:bottomRightRadius="@dimen/change_30px">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/iv_payment_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pay_six_premium_pic_banner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/iv_payment_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/iv_payment_banner"
+                    android:paddingTop="@dimen/change_30px"
+                    android:paddingRight="@dimen/change_60px"
+                    android:src="@mipmap/pay_six_premium_ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/tv_payment_title1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_346px"
+                    android:fontFamily="sans-serif-black"
+                    android:includeFontPadding="false"
+                    android:maxLines="3"
+                    android:text="Limited"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_54px"
+                    android:lineSpacingExtra="@dimen/change_3px"
+                    android:textStyle="italic"
+                    app:autoSizeMinTextSize="@dimen/change_24px"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toStartOf="@id/iv_payment_close"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_header"
+                android:layout_alignLeft="@id/layout_header"
+                android:layout_alignRight="@id/layout_header"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/tv_payment_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_72px"
+                    android:layout_marginTop="@dimen/change_93px"
+                    android:layout_marginRight="@dimen/change_72px"
+                    android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_payment_maintext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_168px"
+                    android:layout_marginRight="@dimen/change_72px"
+                    android:lineSpacingExtra="@dimen/change_15px"
+                    android:textColor="#495760"
+                    android:textSize="@dimen/change_39px" />
+
+            <FrameLayout
+                    android:id="@+id/btn_payment_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_168px"
+                    android:layout_marginLeft="@dimen/change_72px"
+                    android:layout_marginTop="@dimen/change_80px"
+                    android:layout_marginRight="@dimen/change_72px"
+                    android:background="@drawable/bg_round_gradient_theme">
+
+                <TextView
+                        android:id="@+id/tv_payment_continue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Continue"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/change_51px"
+                        android:layout_marginLeft="@dimen/change_66px"
+                        android:layout_marginRight="@dimen/change_66px"
+                        android:maxLines="1"
+                        app:autoSizeMinTextSize="@dimen/change_24px"
+                        app:autoSizeTextType="uniform"
+                        android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/tv_payment_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_84px"
+                    android:layout_marginTop="@dimen/change_30px"
+                    android:layout_marginRight="@dimen/change_84px"
+                    android:layout_marginBottom="@dimen/change_48px"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/change_9px"
+                    android:textColor="#a0b8ba"
+                    android:textSize="@dimen/change_30px" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.palmapp.master.baselib.view.RoundLayout>

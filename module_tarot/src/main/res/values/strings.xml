@@ -1,0 +1,6 @@
+<resources>
+    <string name="tarot_app_name">module_tarot</string>
+    <string name="tarot_result_title1">Today\'s love</string>
+    <string name="tarot_result_title2">Today\'s fortune</string>
+    <string name="tarot_result_title3">Today\'s business</string>
+</resources>

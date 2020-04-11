@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/diamond_bg"
+        android:orientation="vertical">
+
+    <include
+            android:id="@+id/lt_title_bar"
+            layout="@layout/layout_title_bar"/>
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_60px"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/change_45px"
+            android:textColor="#c8e8ff"
+            android:text="@string/palm_judegment_title"/>
+
+    <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_24px"
+            android:layout_marginLeft="@dimen/change_84px"
+            android:layout_marginRight="@dimen/change_84px"
+            android:lineSpacingExtra="@dimen/change_9px"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/change_36px"
+            android:textColor="#66c8e8ff"
+            android:text="@string/palm_judegment_des"/>
+
+    <com.palmapp.master.baselib.view.NetworkStateView
+            android:id="@+id/palm_loading"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/change_75px"
+            android:layout_marginTop="@dimen/change_60px"/>
+
+</LinearLayout>

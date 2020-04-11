@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+    resourcePrefix "google_"
+
+}
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(":baselib")
+    api 'com.google.firebase:firebase-core:17.2.2'
+    api "com.google.android.gms:play-services-ads:16.0.0"
+    api "com.google.android.gms:play-services-base:17.1.0"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    kapt rootProject.ext.arouter_compiler
+}
+apply plugin: 'com.google.gms.google-services'

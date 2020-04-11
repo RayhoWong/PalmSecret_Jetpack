@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_36px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px">
+
+    <ImageView
+            android:id="@+id/iv_palmresult_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/palm_result_pic_portrait"/>
+
+    <LinearLayout
+            android:id="@+id/layout_palmresult_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_palmresult_portrait"
+            android:layout_marginTop="@dimen/change_24px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:background="@drawable/bg_round_66theme"
+            android:orientation="vertical">
+
+        <com.palmapp.master.module_palm.result.PalmLineImageView
+                android:id="@+id/iv_palmresult_palm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:giv_radius_left_top="@dimen/change_28px"
+                app:giv_radius_right_top="@dimen/change_28px"
+                app:giv_measure="width"
+                android:scaleType="centerCrop"/>
+
+        <TextView
+                android:id="@+id/tv_palmresult_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_39px"
+                android:textColor="#ffbb59"
+                android:text="The Hand of Emperor"
+                android:layout_marginLeft="@dimen/change_36px"
+                android:layout_marginTop="@dimen/change_42px"
+                android:layout_marginRight="@dimen/change_36px"
+                android:layout_marginBottom="@dimen/change_42px"/>
+
+        <View
+                android:layout_width="@dimen/change_570px"
+                android:layout_height="@dimen/change_6px"
+                android:background="@drawable/palm_bg_result_line"/>
+
+        <TextView
+                android:id="@+id/tv_palmresult_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_36px"
+                android:textColor="#c8e8ff"
+                android:text="The Hand of Emperor The Hand of Emperor The Hand"
+                android:layout_marginLeft="@dimen/change_36px"
+                android:layout_marginRight="@dimen/change_36px"
+                android:layout_marginTop="@dimen/change_42px"
+                android:layout_marginBottom="@dimen/change_48px"/>
+
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/change_48px"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/change_132px"
+                android:layout_height="@dimen/change_132px"
+                android:layout_marginLeft="@dimen/change_169px"
+                android:src="@drawable/anim_like"/>
+
+            <ImageView
+                android:id="@+id/iv_share2"
+                android:layout_toRightOf="@id/iv_like"
+                android:layout_width="@dimen/change_132px"
+                android:layout_height="@dimen/change_132px"
+                android:layout_marginLeft="@dimen/change_228px"
+                android:src="@mipmap/ic_share" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_palmresult_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/change_21px"
+            android:paddingRight="@dimen/change_21px"
+            android:paddingTop="@dimen/change_14px"
+            android:paddingBottom="@dimen/change_14px"
+            android:textColor="#c8e8ff"
+            android:layout_alignLeft="@id/layout_palmresult_content"
+            android:layout_alignTop="@id/layout_palmresult_content"
+            android:layout_marginLeft="@dimen/change_21px"
+            android:layout_marginTop="@dimen/change_21px"
+            android:drawableLeft="@drawable/palm_bg_circle_green"
+            android:background="@drawable/palm_bg_gray_round"
+            android:drawablePadding="@dimen/change_21px"
+            android:textSize="@dimen/change_30px"
+            android:text="Life Line:90"/>
+
+    <TextView
+            android:id="@+id/tv_palmresult_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/change_21px"
+            android:paddingRight="@dimen/change_21px"
+            android:paddingTop="@dimen/change_14px"
+            android:paddingBottom="@dimen/change_14px"
+            android:textColor="#c8e8ff"
+            android:layout_alignLeft="@id/tv_palmresult_life"
+            android:layout_marginTop="@dimen/change_9px"
+            android:layout_below="@id/tv_palmresult_life"
+            android:drawableLeft="@drawable/palm_bg_circle_blue"
+            android:background="@drawable/palm_bg_gray_round"
+            android:drawablePadding="@dimen/change_21px"
+            android:textSize="@dimen/change_30px"
+            android:text="Business Line:90"/>
+
+    <TextView
+            android:id="@+id/tv_palmresult_emotional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/change_21px"
+            android:paddingRight="@dimen/change_21px"
+            android:paddingTop="@dimen/change_14px"
+            android:paddingBottom="@dimen/change_14px"
+            android:textColor="#c8e8ff"
+            android:layout_alignLeft="@id/tv_palmresult_life"
+            android:layout_marginTop="@dimen/change_9px"
+            android:layout_below="@id/tv_palmresult_business"
+            android:drawableLeft="@drawable/palm_bg_circle_red"
+            android:background="@drawable/palm_bg_gray_round"
+            android:drawablePadding="@dimen/change_21px"
+            android:textSize="@dimen/change_30px"
+            android:text="Emotional Line:90"/>
+
+   <!-- <ImageView
+            android:id="@+id/iv_palmresult_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/palm_result_ic_share"
+            android:layout_alignTop="@id/layout_palmresult_content"
+            android:layout_alignRight="@id/layout_palmresult_content"
+            android:layout_margin="@dimen/change_21px"/>-->
+</RelativeLayout>

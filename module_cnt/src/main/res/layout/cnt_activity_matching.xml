@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/star_bg">
+
+    <include
+            layout="@layout/layout_title_bar_transparent"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:id="@+id/sv_cntmatching"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="outsideOverlay"
+                android:visibility="invisible">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_cntmatching_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                    <ImageView
+                            android:id="@+id/iv_cntmatching"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/cnt_a_00064"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/iv2"/>
+
+                    <Space
+                            android:id="@+id/gl1"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="@dimen/change_74px"
+                            app:layout_constraintStart_toStartOf="@id/iv_cntmatching"
+                            app:layout_constraintBottom_toTopOf="@id/iv_cntmatching"/>
+
+                    <Space
+                            android:id="@+id/gl2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginRight="@dimen/change_74px"
+                            app:layout_constraintEnd_toEndOf="@id/iv_cntmatching"
+                            app:layout_constraintBottom_toTopOf="@id/iv_cntmatching"/>
+
+                    <TextView
+                            android:id="@+id/tv_cntmatching_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/iv2"
+                            app:layout_constraintStart_toStartOf="@id/iv_cntmatching"
+                            android:alpha="0"
+                            app:layout_constraintEnd_toEndOf="@id/iv_cntmatching"
+                            android:text="0%"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/change_45px"
+                            android:gravity="center"
+                            />
+
+                    <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            app:layout_constraintEnd_toEndOf="@id/gl1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@mipmap/ic_gemini"/>
+
+                    <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:alpha="0"
+                            app:layout_constraintStart_toStartOf="@id/gl2"
+                            android:src="@mipmap/ic_gemini"/>
+
+                    <TextView
+                            android:id="@+id/tv_cntmatching_me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/change_42px"
+                            app:layout_constraintTop_toBottomOf="@id/iv2"
+                            app:layout_constraintLeft_toLeftOf="@id/iv2"
+                            app:layout_constraintRight_toRightOf="@id/iv2"
+                            android:alpha="0"
+                            android:textStyle="bold"
+                            android:textColor="@color/theme_text_color"
+                            android:text="Gemini"/>
+
+                    <TextView
+                            android:id="@+id/tv_cntmatching_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/change_42px"
+                            app:layout_constraintTop_toBottomOf="@id/iv1"
+                            app:layout_constraintLeft_toLeftOf="@id/iv1"
+                            app:layout_constraintRight_toRightOf="@id/iv1"
+                            android:textStyle="bold"
+                            android:textColor="@color/theme_text_color"
+                            android:alpha="0"
+                            android:text="Gemini"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                        android:id="@+id/layout_cntmatching_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_cntmatching_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"
+                            android:lineSpacingExtra="@dimen/change_9px"
+                            android:layout_marginTop="@dimen/change_54px"
+                            android:layout_marginLeft="@dimen/change_48px"
+                            android:layout_marginRight="@dimen/change_48px"/>
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/change_48px"
+                            android:background="@drawable/bg_round_33theme">
+
+                        <TextView
+                                android:id="@+id/tv_cntmatching_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/change_36px"
+                                android:layout_marginTop="@dimen/change_36px"
+                                android:layout_marginRight="@dimen/change_36px"
+                                android:layout_marginBottom="@dimen/change_12px"
+                                android:layout_toLeftOf="@id/iv_cntmatching_result"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/change_36px"
+                                android:textColor="@color/_66theme_text_color"/>
+
+                        <TextView
+                                android:id="@+id/tv_cntmatching_result"
+                                android:layout_width="match_parent"
+                                android:layout_below="@id/tv_cntmatching_title"
+                                android:layout_toLeftOf="@id/iv_cntmatching_result"
+                                android:layout_marginLeft="@dimen/change_36px"
+                                android:layout_marginRight="@dimen/change_36px"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/change_45px"
+                                android:textColor="@color/theme_text_color"
+                                android:layout_height="wrap_content"/>
+
+                        <ImageView
+                                android:id="@+id/iv_cntmatching_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/cnt_constellation_matching_pic_gemini"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/change_48px"
+                            android:background="@drawable/bg_round_33theme">
+
+                        <TextView
+                                android:id="@+id/tv_cntmatching_title2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/change_36px"
+                                android:layout_marginTop="@dimen/change_36px"
+                                android:layout_marginRight="@dimen/change_36px"
+                                android:layout_marginBottom="@dimen/change_12px"
+                                android:layout_toLeftOf="@id/iv_cntmatching_result2"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/change_36px"
+                                android:textColor="@color/_66theme_text_color"/>
+
+                        <TextView
+                                android:id="@+id/tv_cntmatching_result2"
+                                android:layout_width="match_parent"
+                                android:layout_below="@id/tv_cntmatching_title2"
+                                android:layout_toLeftOf="@id/iv_cntmatching_result2"
+                                android:layout_marginLeft="@dimen/change_36px"
+                                android:layout_marginRight="@dimen/change_36px"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/change_45px"
+                                android:textColor="@color/theme_text_color"
+                                android:layout_height="wrap_content"/>
+
+                        <ImageView
+                                android:id="@+id/iv_cntmatching_result2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/cnt_constellation_matching_pic_gemini"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.palmapp.master.baselib.view.NetworkStateView
+                android:id="@+id/network"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <com.palmapp.master.baselib.view.PalmBlurView
+                android:id="@+id/bv_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

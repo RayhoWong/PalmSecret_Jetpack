@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baselib" />
+            <option value="$PROJECT_DIR$/lib_utils" />
+            <option value="$PROJECT_DIR$/module_ad" />
+            <option value="$PROJECT_DIR$/module_camera" />
+            <option value="$PROJECT_DIR$/module_cnt" />
+            <option value="$PROJECT_DIR$/module_face" />
+            <option value="$PROJECT_DIR$/module_google" />
+            <option value="$PROJECT_DIR$/module_home" />
+            <option value="$PROJECT_DIR$/module_imageloader" />
+            <option value="$PROJECT_DIR$/module_me" />
+            <option value="$PROJECT_DIR$/module_network" />
+            <option value="$PROJECT_DIR$/module_oldlib" />
+            <option value="$PROJECT_DIR$/module_palm" />
+            <option value="$PROJECT_DIR$/module_pay" />
+            <option value="$PROJECT_DIR$/module_psy" />
+            <option value="$PROJECT_DIR$/module_stasm" />
+            <option value="$PROJECT_DIR$/module_tarot" />
+            <option value="$PROJECT_DIR$/module_today" />
+            <option value="$PROJECT_DIR$/module_transform" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

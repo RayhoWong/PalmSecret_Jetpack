@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/change_240px"
+        android:background="@drawable/palm_bg_countdown"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:layout_marginTop="@dimen/change_48px"
+        android:orientation="horizontal">
+
+    <ImageView
+            android:id="@+id/iv_palm"
+            android:layout_width="@dimen/change_162px"
+            android:layout_height="@dimen/change_162px"
+            android:layout_marginLeft="@dimen/change_48px"/>
+
+    <TextView
+            android:id="@+id/tv_palm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/change_36px"
+            android:lineSpacingExtra="@dimen/change_9px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:textColor="@color/white" />
+</LinearLayout>

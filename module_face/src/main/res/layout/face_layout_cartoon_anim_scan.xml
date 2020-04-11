@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/change_60px"
+        android:layout_alignRight="@+id/ll_cartoon"
+        android:layout_gravity="center"
+        android:src="@mipmap/magic_00005" />
+
+    <LinearLayout
+        android:id="@+id/ll_cartoon"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/change_270px"
+        android:layout_height="@dimen/change_1104px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_1104px"
+            android:orientation="vertical">
+
+            <com.palmapp.master.module_face.activity.cartoon.view.CartoonView
+                android:id="@+id/cartoon_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+            <com.palmapp.master.module_face.activity.cartoon.view.FallingView
+                android:id="@+id/falling_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ll_cartoon"
+        android:layout_alignBottom="@id/iv"
+        android:layout_gravity="center"
+        android:src="@mipmap/filter_result_hand" />
+</RelativeLayout>

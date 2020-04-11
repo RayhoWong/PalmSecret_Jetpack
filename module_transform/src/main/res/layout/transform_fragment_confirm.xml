@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:clickable="true">
+
+    <com.palmapp.master.baselib.view.PhotoEditView
+            android:id="@+id/face_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:PhotoEditView_border="@mipmap/transform_scaning_face_line"
+            app:PhotoEditView_mask="@mipmap/transform_scaning_face_mask"/>
+
+    <ImageView
+            android:id="@+id/transform_takephoto_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/change_48px"
+            android:src="@mipmap/scaning_ic_back" />
+
+
+    <RelativeLayout
+            android:id="@+id/face_takephoto_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/change_186px">
+
+        <ImageButton
+                android:id="@+id/ib_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/scanning_confirm_ic_cancel" />
+
+        <ImageButton
+                android:id="@+id/ib_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_372px"
+                android:layout_toRightOf="@id/ib_cancel"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/scanning_confirm_ic_right" />
+    </RelativeLayout>
+
+<!--    <com.palmapp.master.module_face.activity.takephoto.view.ScanAnimatorView-->
+<!--            android:id="@+id/face_scanview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_above="@id/face_takephoto_button_layout"-->
+<!--            android:layout_marginBottom="@dimen/change_100px"-->
+<!--            android:keepScreenOn="true"-->
+<!--            app:border="@mipmap/transform_scaning_face_line"-->
+<!--            app:mask="@mipmap/transform_scaning_face_mask" />-->
+
+
+    <include android:layout_width="match_parent"
+        android:id="@+id/layout_face_anim"
+        layout="@layout/layout_face_anim"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

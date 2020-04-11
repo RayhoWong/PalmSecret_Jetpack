@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/change_48px">
+
+    <RadioButton
+            android:id="@+id/rb_option"
+            android:button="@null"
+            android:background="@drawable/palm_selector_option"
+            android:checked="false"
+            android:layout_width="@dimen/change_72px"
+            android:layout_height="@dimen/change_72px"/>
+
+    <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rb_option"
+            android:layout_marginTop="@dimen/change_6px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:lineSpacingExtra="@dimen/change_9px"
+            android:text="A swooping semicircular life line"
+            android:textSize="@dimen/change_36px"
+            android:textColor="@color/palm_text_color"/>
+
+    <com.palmapp.master.baselib.view.RoundImageView
+            android:id="@+id/iv_picture"
+            android:src="@mipmap/palm_result_pic_portrait"
+            app:radius="@dimen/change_24px"
+            android:layout_below="@id/tv_description"
+            android:layout_alignLeft="@id/tv_description"
+            android:layout_marginTop="@dimen/change_36px"
+            android:layout_width="@dimen/change_350px"
+            android:layout_height="@dimen/change_450px"/>
+</RelativeLayout>

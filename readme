@@ -1,0 +1,18 @@
+项目结构记录
+module介绍
+app:项目主体,功能ui
+baselib:项目的抽象类，父类，工模模块，公共bean等其他公用内容
+lib_uitls:屏幕适配，多语言等工具
+module_ad:广告接入
+module_google: google 服务接入
+module_home:主页
+module_me:个人页
+module_today:今日页
+module_network:网络请求
+module_pay:支付
+module_oldlib:变老依赖
+module_stasm:变老依赖
+module_face:变老
+module_camera：google 相机
+module_cnt：星座
+

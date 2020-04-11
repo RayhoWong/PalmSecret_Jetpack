@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tarots_cover">
+        <item>tarot_1</item>
+        <item>tarot_2</item>
+        <item>tarot_3</item>
+        <item>tarot_4</item>
+        <item>tarot_5</item>
+        <item>tarot_6</item>
+        <item>tarot_7</item>
+        <item>tarot_8</item>
+        <item>tarot_9</item>
+        <item>tarot_10</item>
+        <item>tarot_11</item>
+        <item>tarot_12</item>
+        <item>tarot_13</item>
+        <item>tarot_14</item>
+        <item>tarot_15</item>
+        <item>tarot_16</item>
+        <item>tarot_17</item>
+        <item>tarot_18</item>
+        <item>tarot_19</item>
+        <item>tarot_20</item>
+        <item>tarot_21</item>
+        <item>tarot_22</item>
+    </array>
+
+    <array name="tarots_name">
+        <item>@string/tarot_fool</item>
+        <item>@string/tarot_magician</item>
+        <item>@string/tarot_priestess</item>
+        <item>@string/tarot_empress</item>
+        <item>@string/tarot_emperor</item>
+        <item>@string/tarot_justice</item>
+        <item>@string/tarot_hierophant</item>
+        <item>@string/tarot_hanged_man</item>
+        <item>@string/tarot_lovers</item>
+        <item>@string/tarot_chariot</item>
+        <item>@string/tarot_strength</item>
+        <item>@string/tarot_hermit</item>
+        <item>@string/tarot_temperance</item>
+        <item>@string/tarot_wheel</item>
+        <item>@string/tarot_death</item>
+        <item>@string/tarot_tower</item>
+        <item>@string/tarot_devil</item>
+        <item>@string/tarot_star</item>
+        <item>@string/tarot_moon</item>
+        <item>@string/tarot_judgement</item>
+        <item>@string/tarot_sun</item>
+        <item>@string/tarot_world</item>
+    </array>
+
+    <array name="tarots_keyword">
+        <item>@string/keyword_fool</item>
+        <item>@string/keyword_magician</item>
+        <item>@string/keyword_highpriestess</item>
+        <item>@string/keyword_empress</item>
+        <item>@string/keyword_emperor</item>
+        <item>@string/keyword_justice</item>
+        <item>@string/keyword_hierophant</item>
+        <item>@string/keyword_hangedman</item>
+        <item>@string/keyword_lovers</item>
+        <item>@string/keyword_chariot</item>
+        <item>@string/keyword_strength</item>
+        <item>@string/keyword_hermit</item>
+        <item>@string/keyword_temperance</item>
+        <item>@string/keyword_wheeloffortune</item>
+        <item>@string/keyword_death</item>
+        <item>@string/keyword_tower</item>
+        <item>@string/keyword_devil</item>
+        <item>@string/keyword_star</item>
+        <item>@string/keyword_moon</item>
+        <item>@string/keyword_judgement</item>
+        <item>@string/keyword_sun</item>
+        <item>@string/keyword_world</item>
+    </array>
+
+
+
+    <string-array name="clothes">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Apple Green</item>
+        <item>Green</item>
+        <item>Light Green</item>
+        <item>Cyan</item>
+        <item>Bright Blue</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Lilac</item>
+        <item>Rose violet</item>
+    </string-array>
+</resources>

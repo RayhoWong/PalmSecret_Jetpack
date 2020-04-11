@@ -1,0 +1,134 @@
+[
+  {
+    "card_key": "190",
+    "type": 1,
+    "name": "The Fool",
+    "keyword": "beginning, boldness, innocence, adventure, trip"
+  },
+  {
+    "card_key": "191",
+    "type": 1,
+    "name": "The Magician",
+    "keyword": "creation, communication, new plan, miracle"
+  },
+  {
+    "card_key": "192",
+    "type": 1,
+    "name": "The High Priestess",
+    "keyword": "instinct, wisdom, sensitivity, sensibility"
+  },
+  {
+    "card_key": "193",
+    "type": 1,
+    "name": "The Empress",
+    "keyword": "motherhood, production, abundance, love"
+  },
+  {
+    "card_key": "194",
+    "type": 1,
+    "name": "The Emperor",
+    "keyword": "power, reign, leadership, patriarchy"
+  },
+  {
+    "card_key": "195",
+    "type": 1,
+    "name": "Justice",
+    "keyword": "justice, cause and effect, law, truth, fairness"
+  },
+  {
+    "card_key": "196",
+    "type": 1,
+    "name": "The Hierophant",
+    "keyword": "innocence, truth, religion, belief, tradition"
+  },
+  {
+    "card_key": "197",
+    "type": 1,
+    "name": "The Hanged Man",
+    "keyword": "compliance, trust, adjustment, sacrifice, mercy"
+  },
+  {
+    "card_key": "198",
+    "type": 1,
+    "name": "The Lovers",
+    "keyword": "choice, combine, harmony, life, love"
+  },
+  {
+    "card_key": "199",
+    "type": 1,
+    "name": "The Chariot",
+    "keyword": "courage, confidence, hope, victory, determination"
+  },
+  {
+    "card_key": "200",
+    "type": 1,
+    "name": "Strength",
+    "keyword": "strength, balance, energy, action, courage"
+  },
+  {
+    "card_key": "201",
+    "type": 1,
+    "name": "The Hermit",
+    "keyword": "introspection, inner guidance, cautious, awakeness"
+  },
+  {
+    "card_key": "202",
+    "type": 1,
+    "name": "Temperance",
+    "keyword": "opportunity, change, moderate, trust, awareness"
+  },
+  {
+    "card_key": "203",
+    "type": 1,
+    "name": "Wheel of Fortune",
+    "keyword": "opportunity, change, destiny, trust, awareness"
+  },
+  {
+    "card_key": "204",
+    "type": 1,
+    "name": "Death",
+    "keyword": "ending, acceptance, new born, transition, stagnation"
+  },
+  {
+    "card_key": "205",
+    "type": 1,
+    "name": "The Tower",
+    "keyword": "interruption, sudden, change, reversal, emergency, accident"
+  },
+  {
+    "card_key": "206",
+    "type": 1,
+    "name": "The Devil",
+    "keyword": "restrain, material desire, suppression, temptation"
+  },
+  {
+    "card_key": "207",
+    "type": 1,
+    "name": "The Star",
+    "keyword": "intelligence, inspiration, serenity, hope, rebirth"
+  },
+  {
+    "card_key": "208",
+    "type": 1,
+    "name": "The Moon",
+    "keyword": "subconscious, insecurity, fear, bewilderment, illusion"
+  },
+  {
+    "card_key": "209",
+    "type": 1,
+    "name": "Judgement",
+    "keyword": "evaluation, enlightenment, transition, judgment, introspection"
+  },
+  {
+    "card_key": "210",
+    "type": 1,
+    "name": "The Sun",
+    "keyword": "positivity, vitality, warmth, dream, joy"
+  },
+  {
+    "card_key": "211",
+    "type": 1,
+    "name": "The World",
+    "keyword": "integration, accomplishment, fulfillment, contentment, ending"
+  }
+]

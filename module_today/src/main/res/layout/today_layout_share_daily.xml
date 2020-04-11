@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            >
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layout_content"
+                android:layout_alignBottom="@id/layout_content"
+                android:background="@mipmap/star_bg"
+                />
+
+        <LinearLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/change_48px"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                        android:id="@+id/iv_me"
+                        android:layout_width="@dimen/change_216px"
+                        android:layout_height="@dimen/change_216px"
+                        android:src="@mipmap/ic_gemini"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_54px"
+                            android:textColor="@color/theme_text_color"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            app:layout_constraintTop_toTopOf="@id/iv_me"
+                            android:text="Tom Sawyer"
+                            app:layout_constraintBottom_toTopOf="@id/tv_user_cnt"
+                            app:layout_constraintStart_toEndOf="@id/iv_me"
+                            android:layout_marginLeft="@dimen/change_18px"/>
+
+                    <TextView
+                            android:id="@+id/tv_user_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"
+                            app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+                            app:layout_constraintStart_toEndOf="@id/iv_me"
+                            android:text="Gemini"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_me"
+                            android:layout_marginLeft="@dimen/change_18px"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_3px"
+                    android:layout_marginTop="@dimen/change_48px"
+                    app:layout_constraintTop_toBottomOf="@id/iv_me"
+                    android:background="@color/_33theme_bg"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_cntmatching_me"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_today_quote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_168px"
+                        android:text="@string/today_daily_quotes"
+                        android:drawablePadding="@dimen/change_36px"
+                        android:drawableLeft="@mipmap/today_tarot_dialog_pic_title_left"
+                        android:drawableRight="@mipmap/today_tarot_dialog_pic_title_right"
+                        android:textSize="@dimen/change_48px"
+                        android:gravity="center"
+                        android:textColor="@color/theme_text_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:fitsSystemWindows="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_today_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/change_1312px"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_48px"
+                        app:giv_radius="@dimen/change_24px"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_quote"/>
+
+                <TextView
+                        android:id="@+id/tv_today_content"
+                        android:textSize="@dimen/change_39px"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:drawableTop="@mipmap/today_quotes_pic1"
+                        android:drawablePadding="@dimen/change_42px"
+                        android:layout_marginTop="@dimen/change_45px"
+                        app:layout_constraintTop_toTopOf="@id/iv_today_content"
+                        app:layout_constraintEnd_toEndOf="@id/iv_today_content"
+                        app:layout_constraintStart_toStartOf="@id/iv_today_content"/>
+
+                <TextView
+                        android:id="@+id/tv_today_artist"
+                        android:textSize="@dimen/change_33px"
+                        android:textColor="#66ffffff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableBottom="@mipmap/today_quotes_pic2"
+                        android:drawablePadding="@dimen/change_42px"
+                        android:layout_marginTop="@dimen/change_17px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_content"
+                        app:layout_constraintEnd_toEndOf="@id/iv_today_content"
+                        app:layout_constraintStart_toStartOf="@id/iv_today_content"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/today_quotes_pic3"
+                        android:layout_marginBottom="@dimen/change_45px"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_today_content"
+                        app:layout_constraintEnd_toEndOf="@id/iv_today_content"
+                        app:layout_constraintStart_toStartOf="@id/iv_today_content"/>
+
+                <TextView
+                        android:id="@+id/tv_today_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_168px"
+                        android:text="@string/today_daily_color"
+                        android:drawablePadding="@dimen/change_36px"
+                        android:drawableLeft="@mipmap/today_tarot_dialog_pic_title_left"
+                        android:drawableRight="@mipmap/today_tarot_dialog_pic_title_right"
+                        android:textSize="@dimen/change_48px"
+                        android:gravity="center"
+                        android:textColor="@color/theme_text_color"
+                        android:layout_marginTop="@dimen/change_54px"
+                        app:layout_constraintTop_toBottomOf="@id/iv_today_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                        android:id="@+id/tv_today_color_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/_66theme_text_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/today_daily_wear"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_color"
+                        />
+
+                <ImageView
+                        android:id="@+id/iv_today_color1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/today_color_pic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_today_color2"
+                        android:layout_marginTop="@dimen/change_36px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_color_des"/>
+
+                <ImageView
+                        android:id="@+id/iv_today_color2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/today_color_pic"
+                        app:layout_constraintEnd_toStartOf="@id/iv_today_color3"
+                        app:layout_constraintStart_toEndOf="@id/iv_today_color1"
+                        android:layout_marginTop="@dimen/change_36px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_color_des"/>
+
+                <ImageView
+                        android:id="@+id/iv_today_color3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/today_color_pic"
+                        app:layout_constraintStart_toEndOf="@id/iv_today_color2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/change_36px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_color_des"/>
+
+                <TextView
+                        android:id="@+id/tv_today_number_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_168px"
+                        android:text="@string/today_daily_number"
+                        android:drawablePadding="@dimen/change_36px"
+                        android:drawableLeft="@mipmap/today_tarot_dialog_pic_title_left"
+                        android:drawableRight="@mipmap/today_tarot_dialog_pic_title_right"
+                        android:textSize="@dimen/change_48px"
+                        android:gravity="center"
+                        android:textColor="@color/theme_text_color"
+                        android:layout_marginTop="@dimen/change_54px"
+                        app:layout_constraintTop_toBottomOf="@id/iv_today_color2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                        android:id="@+id/tv_today_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_number_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="@dimen/change_78px"
+                        android:gravity="center"
+                        android:textColor="@color/theme_text_color"
+                        android:text="9"
+                        android:textStyle="bold"
+                        android:background="@mipmap/today_number_pic"/>
+
+                <TextView
+                        android:id="@+id/tv_today_tarot_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/change_168px"
+                        android:text="@string/today_daily_tarot"
+                        android:drawablePadding="@dimen/change_36px"
+                        android:drawableLeft="@mipmap/today_tarot_dialog_pic_title_left"
+                        android:drawableRight="@mipmap/today_tarot_dialog_pic_title_right"
+                        android:textSize="@dimen/change_48px"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textColor="@color/theme_text_color"
+                        android:layout_marginTop="@dimen/change_54px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_number"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <RelativeLayout
+                        android:id="@+id/layout_today_tarot"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/change_984px"
+                        android:visibility="gone"
+                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_tarot_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@mipmap/today_tarot_pic_position">
+
+                    <com.palmapp.master.baselib.view.FlipImageView
+                            android:id="@+id/iv_tarot1"
+                            android:layout_width="@dimen/change_258px"
+                            android:layout_height="@dimen/change_426px"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/today_tarto_back"
+                            app:flipDrawable="@mipmap/tarot_1"/>
+
+                    <com.palmapp.master.baselib.view.FlipImageView
+                            android:id="@+id/iv_tarot2"
+                            android:layout_width="@dimen/change_258px"
+                            android:layout_height="@dimen/change_426px"
+                            android:layout_alignParentBottom="true"
+                            android:src="@mipmap/today_tarto_back"
+                            app:flipDrawable="@mipmap/tarot_2"/>
+
+                    <com.palmapp.master.baselib.view.FlipImageView
+                            android:id="@+id/iv_tarot3"
+                            android:layout_width="@dimen/change_258px"
+                            android:layout_height="@dimen/change_426px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/today_tarto_back"
+                            app:flipDrawable="@mipmap/tarot_3"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:id="@+id/layout_today_tarot_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/layout_today_tarot"
+                        android:layout_marginTop="@dimen/change_48px"
+                        >
+
+                    <TextView
+                            android:id="@+id/tv_today_result_title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/change_45px"
+                            android:textColor="@color/theme_text_color"
+                            android:layout_marginTop="@dimen/change_66px"/>
+
+                    <TextView
+                            android:id="@+id/tv_today_result_content1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/change_36px"
+                            android:lineSpacingExtra="@dimen/change_9px"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"/>
+
+                    <TextView
+                            android:id="@+id/tv_today_result_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/change_45px"
+                            android:textColor="@color/theme_text_color"
+                            android:layout_marginTop="@dimen/change_66px"/>
+
+                    <TextView
+                            android:id="@+id/tv_today_result_content2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/change_36px"
+                            android:lineSpacingExtra="@dimen/change_9px"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"/>
+
+                    <TextView
+                            android:id="@+id/tv_today_result_title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/change_45px"
+                            android:textColor="@color/theme_text_color"
+                            android:layout_marginTop="@dimen/change_66px"/>
+
+                    <TextView
+                            android:id="@+id/tv_today_result_content3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/change_36px"
+                            android:lineSpacingExtra="@dimen/change_9px"
+                            android:textSize="@dimen/change_36px"
+                            android:textColor="@color/_66theme_text_color"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_3px"
+                    android:background="@color/_33theme_bg"
+                    android:layout_marginTop="@dimen/change_36px"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cntmatching_me"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/change_48px"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:text="Palm Secret"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/change_42px"
+                        android:textColor="@color/theme_text_color"
+                        app:layout_constraintTop_toTopOf="@+id/cnt_imageview"
+                        app:layout_constraintBottom_toBottomOf="@+id/cnt_imageview"
+                        app:layout_constraintEnd_toStartOf="@+id/cnt_imageview"
+                        android:layout_marginRight="@dimen/change_42px"/>
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:layout_width="@dimen/change_120px"
+                        android:layout_height="@dimen/change_120px"
+                        android:src="@mipmap/ic_launcher"
+                        app:giv_radius="@dimen/change_24px"
+                        android:id="@+id/cnt_imageview"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

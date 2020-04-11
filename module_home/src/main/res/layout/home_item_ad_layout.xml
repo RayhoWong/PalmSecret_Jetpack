@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/change_42px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    <ImageView
+            android:id="@+id/iv_ad2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:src="@mipmap/ad_native_pic_ad" />
+
+    <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/native_appinstall"
+            android:src="@mipmap/ad_native_ic_close" />
+
+    <com.google.android.gms.ads.formats.NativeAppInstallAdView
+            android:id="@+id/native_appinstall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_close"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/change_24px">
+
+        <com.google.android.gms.ads.formats.NativeContentAdView
+                android:id="@+id/native_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:id="@+id/rl_native"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_round_33theme">
+
+
+                <ImageView
+                        android:id="@+id/iv_ad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/change_42px"
+                        android:src="@mipmap/ad_native_pic_ad" />
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/change_136px"
+                        android:layout_height="@dimen/change_136px"
+                        android:layout_below="@id/iv_ad"
+                        android:layout_marginLeft="@dimen/change_42px"
+                        android:layout_marginTop="@dimen/change_18px"
+                        android:src="@mipmap/ic_launcher"
+                        app:giv_radius="@dimen/change_24px" />
+
+                <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_ad"
+                        android:layout_marginLeft="@dimen/change_15px"
+                        android:layout_marginTop="@dimen/change_36px"
+                        android:layout_marginRight="@dimen/change_42px"
+                        android:layout_toRightOf="@id/iv_icon"
+                        android:lineSpacingExtra="@dimen/change_9px"
+                        android:maxLines="3"
+                        android:text="Palm Secret Palm Secret Palm Secret Palm Secret Palm Secret"
+                        android:textColor="#c8e8ff"
+                        android:textSize="@dimen/change_33px"
+                        android:textStyle="bold" />
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="@dimen/change_822px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/change_18px"
+                        android:scaleType="centerCrop"
+                        app:giv_radius="@dimen/change_24px" />
+
+                <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_image"
+                        android:layout_marginLeft="@dimen/change_42px"
+                        android:layout_marginTop="@dimen/change_18px"
+                        android:layout_marginRight="@dimen/change_42px"
+                        android:lineSpacingExtra="@dimen/change_6px"
+                        android:maxLines="5"
+                        android:text="Palm Secret Palm Secret Palm Secret Palm Secret Palm Secret SDFSDFSDFSFSDFS SFSDFsdfsdfsdkf;lsdf s;lfdksd;lf ksldkfsd l; l;k;lsdf;l  SDFSDFSDFSDFSDFSD"
+                        android:textColor="#66c8e8ff"
+                        android:textSize="@dimen/change_24px" />
+
+                <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/change_3px"
+                        android:layout_below="@id/tv_content"
+                        android:layout_marginTop="@dimen/change_18px"
+                        android:background="@color/_33theme_bg" />
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/change_90px"
+                        android:layout_below="@id/view_line"
+                        android:orientation="horizontal">
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/change_42px"
+                            android:src="@mipmap/ad_native_pic_google" />
+
+                    <TextView
+                            android:id="@+id/tv_install"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/change_72px"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/change_42px"
+                            android:background="@drawable/bg_round_blue"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/change_33px"
+                            android:paddingRight="@dimen/change_33px"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+        </com.google.android.gms.ads.formats.NativeContentAdView>
+    </com.google.android.gms.ads.formats.NativeAppInstallAdView>
+
+
+</RelativeLayout>

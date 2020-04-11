@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <include
+            layout="@layout/layout_title_bar"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:id="@+id/layout_psyquiz_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/diamond_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/change_48px">
+
+            <TextView
+                    android:id="@+id/tv_psyquizresult_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/change_42px"
+                    android:textColor="@color/theme_text_color"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_psyquizresult_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/change_36px"
+                    android:lineSpacingExtra="@dimen/change_9px"
+                    android:textColor="@color/_66theme_text_color"
+                    android:layout_marginTop="@dimen/change_48px"
+                    />
+
+            <include
+                android:id="@+id/layout_share"
+                layout="@layout/layout_like_n_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_60px"
+                android:layout_marginBottom="@dimen/change_64px" />
+
+            <View
+                    android:layout_width="@dimen/change_540px"
+                    android:layout_height="@dimen/change_6px"
+                    android:layout_marginBottom="@dimen/change_60px"
+                    android:background="@drawable/psy_bg_quizresult_view"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/change_45px"
+                    android:textStyle="bold"
+                    android:textColor="@color/theme_text_color"
+                    android:text="Recommend"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:layout_marginTop="@dimen/change_48px"
+        android:orientation="horizontal">
+
+    <ImageView
+            android:id="@+id/iv_palm"
+            android:layout_width="@dimen/change_390px"
+            android:layout_height="@dimen/change_390px" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_390px"
+            android:layout_marginLeft="@dimen/change_39px">
+
+        <TextView
+                android:id="@+id/tv_palm_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/palm_result_ic_width"
+                android:drawablePadding="@dimen/change_30px"
+                android:gravity="center"
+                android:text="Palm Width 2"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/change_36px"
+                android:textStyle="bold"
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                app:layout_constraintBottom_toTopOf="@id/tv_palm_length"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_palm_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/palm_result_ic_width"
+                android:drawablePadding="@dimen/change_30px"
+                android:gravity="center"
+                android:text="Palm Length 2"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/change_36px"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_finger_length"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_palm_width" />
+
+        <TextView
+                android:id="@+id/tv_finger_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/palm_result_ic_width"
+                android:drawablePadding="@dimen/change_30px"
+                android:gravity="center"
+                android:text="Finger Length 2"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/change_36px"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_palm_length" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@mipmap/ad_ads_watch">
+
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="151dp"
+            android:gravity="center"
+            android:text="@string/pay_dialog_watch_ads_title"
+
+            android:textColor="#2a2a2a"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/pay_dialog_watch_ads_sub_title"
+            android:textColor="#81878d"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="109dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:text="@string/pay_dialog_watch_ads_no"
+                android:textColor="#3fcb9a"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/ad_left_btn_bg"/>
+
+        <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="109dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:text="@string/pay_dialog_watch_ads_yes"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/ad_right_btn_bg"/>
+    </LinearLayout>
+
+</RelativeLayout>

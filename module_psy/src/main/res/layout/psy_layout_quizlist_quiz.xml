@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.RoundLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/_33theme_bg">
+
+        <TextView
+                android:id="@+id/tv_psyquiz_num"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/change_54px"
+                android:layout_height="@dimen/change_102px"
+                android:textSize="@dimen/change_48px"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:text="2/10"
+                android:background="@drawable/psy_bg_quiz_title"/>
+
+        <TextView
+                android:id="@+id/tv_psyquiz_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_39px"
+                android:textColor="@color/theme_text_color"
+                android:layout_marginLeft="@dimen/change_54px"
+                android:layout_marginRight="@dimen/change_54px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:text="I think it more likely that the Peverell brothers were simply gifted ?"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_psyquiz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/change_60px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/change_48px"
+                tools:listitem="@layout/psy_item_quizlist"
+                tools:itemCount="5"/>
+    </LinearLayout>
+</com.palmapp.master.baselib.view.RoundLayout>

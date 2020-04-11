@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/share_old_pic0"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/layout_content"
+            android:layout_alignBottom="@id/layout_content" />
+
+        <FrameLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="48px">
+
+            <LinearLayout
+                android:id="@+id/share_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_me"
+                    android:layout_width="216px"
+                    android:layout_height="216px"
+                    android:src="@mipmap/ic_gemini" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18px"
+                        android:text="Tom Sawyer"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="54px" />
+
+                    <TextView
+                        android:id="@+id/tv_user_cnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18px"
+                        android:text="Gemini"
+                        android:textColor="@color/_66theme_text_color"
+                        android:textSize="36px" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_after"
+                android:layout_width="804px"
+                android:layout_height="804px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="432px"
+                android:scaleType="centerCrop"
+                app:giv_measure="width"
+                app:giv_shape="oval" />
+
+            <ImageView
+                android:layout_width="204px"
+                android:layout_height="204px"
+                android:layout_gravity="right"
+                android:layout_marginTop="1065px"
+                android:layout_marginRight="120px"
+                android:src="@mipmap/share_old_pic1" />
+
+            <RelativeLayout
+                android:layout_width="336px"
+                android:layout_height="336px"
+                android:layout_below="@id/tv_title"
+                android:layout_gravity="right"
+                android:layout_marginTop="264px"
+                android:layout_marginRight="12px"
+                android:background="@drawable/bg_shape_oval">
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                    android:id="@+id/iv_before"
+                    android:layout_width="294px"
+                    android:layout_height="294px"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    app:giv_measure="width"
+                    app:giv_shape="oval" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72px"
+                android:layout_marginTop="1164px"
+                android:text="50"
+                android:textColor="@color/white"
+                android:textSize="222px"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360px"
+                android:layout_marginTop="1326px"
+                android:text="@string/share_old_title"
+                android:textColor="@color/color_c8e8ff"
+                android:textSize="60px"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="72px"
+                android:layout_marginLeft="72px"
+                android:layout_marginTop="1470px"
+                android:background="@drawable/bg_shape_retengle"
+                android:padding="18px"
+                android:text="@string/share_old_content2"
+                android:textColor="@color/white"
+                android:textSize="42px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_gang"
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="72px"
+                android:layout_marginTop="1607px"
+                android:src="@mipmap/share_old_ic_text" />
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="753px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="132px"
+                android:layout_marginTop="1607px"
+                android:layout_marginRight="72px"
+                android:lineSpacingExtra="15px"
+                android:text="@string/share_download"
+                android:textColor="#66c8e8ff"
+                android:textSize="36px"
+                android:textStyle="bold|italic" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</FrameLayout>

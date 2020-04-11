@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn_pay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一秒钟切换买量" />
+
+            <EditText
+                    android:id="@+id/et_campaign"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="campaign" />
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始请求配置" />
+
+        <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清除本地配置" />
+
+        <Button
+                android:id="@+id/btn_start12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页(首次启动页场景）" />
+
+        <Button
+                android:id="@+id/btn_start13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页(非首次启动页场景）" />
+
+        <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（style2)" />
+
+        <Button
+                android:id="@+id/btn_start5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（style4)" />
+
+        <Button
+                android:id="@+id/btn_start6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（style5)" />
+
+        <Button
+                android:id="@+id/btn_start7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（style7)" />
+
+        <Button
+                android:id="@+id/btn_start2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（手相结果）" />
+
+        <Button
+                android:id="@+id/btn_start3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（变老结果）" />
+
+        <Button
+                android:id="@+id/btn_start8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（宝宝结果）" />
+
+
+        <Button
+                android:id="@+id/btn_start9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（变性结果）" />
+
+        <Button
+                android:id="@+id/btn_start10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（星座匹配结果）" />
+
+        <Button
+                android:id="@+id/btn_start11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始跳转订阅页（塔罗结果）" />
+    </LinearLayout>
+</ScrollView>

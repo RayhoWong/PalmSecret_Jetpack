@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:fillViewport="true"
+        android:background="@mipmap/diamond_bg">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false">
+
+            <com.palmapp.master.baselib.view.NetworkStateView
+                    android:id="@+id/palm_loading"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                    android:id="@+id/rl_titlebar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_168px"
+                    android:background="@color/title_bar">
+
+                <ImageView
+                        android:id="@+id/iv_titlebar_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/scaning_ic_back"
+                        android:paddingLeft="@dimen/change_42px"
+                        android:paddingRight="@dimen/change_42px"/>
+
+                <TextView
+                        android:id="@+id/tv_titlebar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_titlebar_back"
+                        android:layout_centerVertical="true"
+                        android:text="Career"
+                        android:textSize="@dimen/change_48px"
+                        android:textColor="#c8e8ff"/>
+
+                <ImageView
+                        android:src="@mipmap/tarot_ic_share"
+                        android:id="@+id/iv_titlebar_share"
+                        android:layout_width="@dimen/change_72px"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible"
+                        android:layout_marginRight="@dimen/change_48px"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/rl_tarot"
+                    android:layout_below="@id/rl_titlebar"
+                    android:layout_width="@dimen/change_870px"
+                    android:layout_height="@dimen/change_900px"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/change_108px"
+                    android:background="@mipmap/tarot_topic_career">
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_tarot_top"
+                        android:layout_width="@dimen/change_258px"
+                        android:layout_height="@dimen/change_426px"
+                        android:scaleType="centerCrop"
+                        app:radius="@dimen/change_12px"
+                        android:layout_centerHorizontal="true"/>
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_tarot_miaddle"
+                        android:layout_width="@dimen/change_258px"
+                        android:layout_height="@dimen/change_426px"
+                        android:scaleType="centerCrop"
+                        app:radius="@dimen/change_12px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        />
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_tarot_left"
+                        android:layout_width="@dimen/change_258px"
+                        android:layout_height="@dimen/change_426px"
+                        android:scaleType="centerCrop"
+                        app:radius="@dimen/change_12px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"/>
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_tarot_right"
+                        android:layout_width="@dimen/change_258px"
+                        android:layout_height="@dimen/change_426px"
+                        android:scaleType="centerCrop"
+                        app:radius="@dimen/change_12px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <com.palmapp.master.module_tarot.activity.TarotRecyclerview
+                    android:id="@+id/rcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/change_312px"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="invisible"
+                    android:overScrollMode="never"/>
+
+
+            <com.palmapp.master.baselib.view.PalmBlurView
+                    android:id="@+id/tarot_blurview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/change_168px"
+                    android:visibility="gone"/>
+
+
+            <LinearLayout
+                    android:id="@+id/ll_tarot_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_tarot"
+                    android:layout_marginTop="@dimen/change_60px"
+                    android:layout_marginLeft="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_48px"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_tarot_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_36px"
+                        android:lineSpacingExtra="@dimen/change_9px"
+                        android:textColor="#66c8e8ff"
+                        android:layout_marginTop="@dimen/change_66px"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:id="@+id/rl_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/color_d9000000"
+                android:visibility="gone">
+
+            <ImageView
+                    android:id="@+id/iv_close"
+                    android:src="@mipmap/tarot_dialog_ic_cancel"
+                    android:layout_marginTop="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_48px"
+                    android:visibility="invisible"
+                    android:layout_gravity="right"
+                    android:layout_width="@dimen/change_90px"
+                    android:layout_height="@dimen/change_90px"/>
+
+            <TextView
+                    android:id="@+id/tv_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/change_30px"
+                    android:lineSpacingExtra="@dimen/change_6px"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="invisible"
+                    tools:text="Type of Your Love"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/change_48px"
+                    android:textColor="@color/theme_text_color"/>
+
+            <FrameLayout
+                    android:id="@+id/fl_replace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/change_66px"
+                    android:layout_gravity="center_horizontal">
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_replace1"
+                        app:radius="@dimen/change_24px"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/change_648px"
+                        android:layout_height="@dimen/change_1072px"/>
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_replace2"
+                        app:radius="@dimen/change_24px"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/change_648px"
+                        android:layout_height="@dimen/change_1072px"/>
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_replace3"
+                        app:radius="@dimen/change_24px"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/change_648px"
+                        android:layout_height="@dimen/change_1072px"/>
+
+                <com.palmapp.master.baselib.view.RoundImageView
+                        android:id="@+id/iv_replace4"
+                        app:radius="@dimen/change_24px"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/change_648px"
+                        android:layout_height="@dimen/change_1072px"/>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/ll_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/change_90px"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="invisible"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:src="@mipmap/tarot_dialog_pic_title_left"
+                        android:layout_width="@dimen/change_96px"
+                        android:layout_height="@dimen/change_66px"/>
+
+                <TextView
+                        android:id="@+id/tv_card_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/change_36px"
+                        android:layout_marginRight="@dimen/change_36px"
+                        android:lineSpacingExtra="@dimen/change_6px"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/change_42px"
+                        android:textColor="@color/theme_text_color"/>
+
+                <ImageView
+                        android:src="@mipmap/tarot_dialog_pic_title_right"
+                        android:layout_width="@dimen/change_96px"
+                        android:layout_height="@dimen/change_66px"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:id="@+id/tv_keywords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/change_60px"
+                    android:layout_marginLeft="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_48px"
+                    android:lineSpacingExtra="@dimen/change_6px"
+                    android:textSize="@dimen/change_36px"
+                    android:textColor="@color/theme_text_color"/>
+
+
+            <TextView
+                    android:id="@+id/tv_card_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_marginTop="@dimen/change_48px"
+                    android:layout_marginLeft="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_48px"
+                    android:lineSpacingExtra="@dimen/change_9px"
+                    android:textSize="@dimen/change_36px"
+                    android:textColor="#66c8e8ff"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,70 @@
+if (!isNeedPsyModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        if (!isNeedPsyModule.toBoolean()) {
+            applicationId "com.palmapp.master.module_psy"
+        }
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        renderscriptTargetApi rootProject.ext.targetSdkVersion
+        //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+
+    sourceSets {
+        debug {
+            if (isNeedPsyModule.toBoolean()) {
+                setRoot 'src/main'
+                kotlin.srcDirs = ['main/java']
+            }
+        }
+    }
+
+
+    packagingOptions {
+        exclude '**/commerceutils-svnlog.properties'
+    }
+    resourcePrefix "psy_"
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':baselib')
+    implementation project(':module_network')
+    implementation project(':module_imageloader')
+    implementation project(':module_ad')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(':module_camera')
+    kapt rootProject.ext.arouter_compiler
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+}

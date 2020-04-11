@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/change_144px"
+              android:gravity="center_vertical"
+              android:layout_marginBottom="@dimen/change_36px"
+              android:background="@drawable/psy_bg_quiz_selector">
+
+    <TextView
+            android:id="@+id/tv_psyquiz_option_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/_66theme_text_color"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/change_48px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:text="A">
+    </TextView>
+
+    <TextView
+            android:id="@+id/tv_psyquiz_option_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_text_color"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/change_36px"
+            android:layout_marginLeft="@dimen/change_42px"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Agree">
+    </TextView>
+</LinearLayout>

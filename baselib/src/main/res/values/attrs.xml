@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="radius" format="dimension"/>
+    <attr name="cycle" format="boolean"/>
+    <attr name="topLeftRadius" format="dimension"/>
+    <attr name="topRightRadius" format="dimension"/>
+    <attr name="bottomLeftRadius" format="dimension"/>
+    <attr name="bottomRightRadius" format="dimension"/>
+    <attr name="startColor" format="color"/>
+    <attr name="endColor" format="color"/>
+    <declare-styleable name="GradientColorTextView">
+        <attr name="startColor"/>
+        <attr name="endColor"/>
+    </declare-styleable>
+    <declare-styleable name="RoundLayout">
+        <attr name="radius"/>
+        <attr name="cycle"/>
+
+        <attr name="topLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomLeftRadius"/>
+        <attr name="bottomRightRadius"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScanView">
+        <attr name="border" format="reference"/>
+        <attr name="mask" format="reference"/>
+        <attr name="scale" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="PhotoEditView">
+        <attr name="PhotoEditView_border" format="reference"/>
+        <attr name="PhotoEditView_mask" format="reference"/>
+        <attr name="mask_width" format="dimension"/>
+        <attr name="mask_height" format="dimension"/>
+        <attr name="mask_scale" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="PalmImageView">
+        <attr name="giv_shape" format="enum">
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+        </attr>
+
+        <attr name="giv_radius" format="dimension"/>
+        <attr name="giv_radius_left_top" format="dimension"/>
+        <attr name="giv_radius_left_bottom" format="dimension"/>
+        <attr name="giv_radius_right_top" format="dimension"/>
+        <attr name="giv_radius_right_bottom" format="dimension"/>
+
+        <attr name="giv_press_background" format="color"/>
+
+        <attr name="giv_measure" format="enum">
+            <enum name="max" value="1"/>
+            <enum name="min" value="2"/>
+            <enum name="width" value="3"/>
+            <enum name="height" value="4"/>
+        </attr>
+    </declare-styleable>
+
+
+    <!--圆角ImageView-->
+    <declare-styleable name="RoundImageView">
+        <attr name="radius"/>
+        <attr name="topLeftRadius"/>
+        <attr name="bottomLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomRightRadius"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelTextView">
+        <attr name="radius"/>
+        <attr name="startColor"/>
+        <attr name="endColor"/>
+        <attr name="srokeWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlipImageView">
+        <attr name="isAnimated" format="boolean"/>
+        <attr name="isFlipped" format="boolean"/>
+        <attr name="flipDrawable" format="reference"/>
+        <attr name="flipDuration" format="integer"/>
+        <attr name="flipInterpolator" format="reference"/>
+        <attr name="flipOnce" format="boolean"/>
+        <attr name="flipRotations">
+            <flag name="none" value="0"/>
+            <flag name="x" value="1"/>
+            <flag name="y" value="2"/>
+            <flag name="z" value="4"/>
+        </attr>
+        <attr name="reverseRotation" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlignTopTextView">
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawablePadding" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundProgress">
+        <attr name="bgColor" format="color" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="progressRoundWidth" format="dimension" />
+        <attr name="maxProgress" format="integer" />
+    </declare-styleable>
+</resources>

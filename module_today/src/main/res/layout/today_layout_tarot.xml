@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/rl_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+        <ImageView
+                android:id="@+id/iv_today_close"
+                android:layout_width="@dimen/change_90px"
+                android:layout_height="@dimen/change_90px"
+                android:layout_marginTop="@dimen/change_90px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:src="@mipmap/today_dialog_ic_cancel"
+                android:layout_gravity="right"/>
+
+        <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_today_res"
+                android:layout_width="@dimen/change_648px"
+                android:layout_height="@dimen/change_1072px"
+                android:src="@mipmap/tarot_2"/>
+
+        <TextView
+                android:id="@+id/tv_today_quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_90px"
+                android:layout_marginBottom="@dimen/change_60px"
+                android:text="Daily Quotes"
+                android:textStyle="bold"
+                android:drawablePadding="@dimen/change_36px"
+                android:drawableLeft="@mipmap/today_tarot_dialog_pic_title_left"
+                android:drawableRight="@mipmap/today_tarot_dialog_pic_title_right"
+                android:textSize="@dimen/change_42px"
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"/>
+
+        <TextView
+                android:id="@+id/tv_today_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@color/_66theme_text_color"
+                />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.RoundLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="@dimen/change_840px"
+            android:background="@drawable/bg_common_dialog"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/change_72px">
+
+        <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/change_72px"
+                android:layout_marginRight="@dimen/change_72px"
+                android:lineSpacingExtra="@dimen/change_12px"
+                android:textColor="#99000000"
+                android:textSize="@dimen/change_36px"
+                android:text="@string/psy_confirm_quit"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_156px"
+                android:layout_marginTop="@dimen/change_45px"
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+            <TextView
+                    android:id="@+id/tv_negative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/change_80px"
+                    android:padding="@dimen/change_40px"
+                    android:gravity="right"
+                    android:clickable="true"
+                    android:singleLine="true"
+                    android:textColor="#00ab89"
+                    android:textSize="@dimen/change_42px"
+                    android:text="@string/no"/>
+
+            <TextView
+                    android:id="@+id/tv_positive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/change_40px"
+                    android:layout_marginRight="@dimen/change_160px"
+                    android:clickable="true"
+                    android:singleLine="true"
+                    android:textColor="#00ab89"
+                    android:textSize="@dimen/change_42px"
+                    android:text="@string/yes"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.palmapp.master.baselib.view.RoundLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/change_18px"
+              android:layout_marginRight="@dimen/change_18px"
+              android:gravity="center_horizontal">
+
+    <com.palmapp.master.baselib.view.RoundLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_744px">
+
+        <TextureView
+                android:id="@+id/textureView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_744px"/>
+
+        <ImageView
+                android:id="@+id/iv_payment_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+    </com.palmapp.master.baselib.view.RoundLayout>
+
+    <com.palmapp.master.baselib.view.GradientColorTextView
+            android:id="@+id/tv_payment_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/change_162px"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:gravity="center"
+            android:text="Check your aging face"
+            android:textColor="#0bc88c"
+            android:textSize="@dimen/change_54px"
+            android:textStyle="bold"
+            app:endColor="#187edc"
+            app:startColor="#0bc88c" />
+</LinearLayout>

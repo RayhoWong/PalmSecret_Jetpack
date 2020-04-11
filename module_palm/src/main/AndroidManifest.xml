@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.palmapp.master.module_palm">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application>
+        <!-- 扫描手相 -->
+        <activity
+            android:name=".scan.PalmScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen"></activity> <!-- 手相结果 -->
+        <activity android:name=".result.PalmResultActivity" /> <!-- 手相问答 -->
+        <activity
+            android:name=".test.PalmprintJudgActivity"
+            android:screenOrientation="portrait" /> <!-- 手相问答详情 -->
+        <activity
+            android:name=".test.PalmprintJudgDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 手相问答结果 -->
+        <activity
+            android:name=".test.PalmprintJudgResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".match.PalmMatchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".match.PalmMatchLoadingActivity" />
+        <activity android:name=".match.PalmMatchResultActivity" />
+        <activity android:name=".result.PalmChatActivity" />
+    </application>
+
+</manifest>

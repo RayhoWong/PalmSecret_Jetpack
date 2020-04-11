@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/star_bg"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:id="@+id/fl_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+             android:id="@+id/bottom_navigation_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:background="@mipmap/app_home_pic_bar"
+             app:elevation="@dimen/change_0px"
+             app:itemBackground="@null"
+             app:itemHorizontalTranslationEnabled="false"
+             app:itemTextColor="@drawable/app_selector_bottom_navigation"
+             app:itemTextAppearanceInactive="@style/app_MyBottomNavigationBarTextAppearance"
+             app:itemTextAppearanceActive="@style/app_MyBottomNavigationBarTextAppearance"
+             app:itemIconSize="@dimen/change_90px"
+             app:labelVisibilityMode="labeled"
+             app:menu="@menu/app_bottom_navigation"/>-->
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_246px"
+            android:layout_gravity="bottom"
+            android:background="@mipmap/app_home_pic_bar"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+                android:id="@+id/ll_tab_home"
+                android:layout_width="@dimen/change_328px"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+            <RelativeLayout style="@style/app_bottomnavigation_tab_rl">
+
+                <ImageView
+                        android:id="@+id/iv_tab_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/app_selector_tab_home" />
+
+                <TextView
+                        android:id="@+id/tv_tab_home"
+                        style="@style/app_bottomnavigation_tab_text"
+                        android:layout_below="@id/iv_tab_home"
+                        android:text="@string/tab_home" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/ll_tab_today"
+                android:layout_width="@dimen/change_328px"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+            <RelativeLayout style="@style/app_bottomnavigation_tab_rl">
+
+                <ImageView
+                        android:id="@+id/iv_tab_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/app_selector_tab_today" />
+
+                <TextView
+                        android:id="@+id/tv_today_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/change_13px"
+                        android:text="28"
+                        android:textColor="@drawable/app_selector_bottom_navigation"
+                        android:textSize="@dimen/change_36px"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/tv_tab_today"
+                        style="@style/app_bottomnavigation_tab_text"
+                        android:layout_below="@id/iv_tab_today"
+                        android:text="@string/tab_today" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/ll_tab_me"
+                android:layout_width="@dimen/change_328px"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+            <RelativeLayout style="@style/app_bottomnavigation_tab_rl">
+
+                <ImageView
+                        android:id="@+id/iv_tab_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/app_selector_tab_me" />
+
+                <TextView
+                        android:id="@+id/tv_tab_me"
+                        style="@style/app_bottomnavigation_tab_text"
+                        android:layout_below="@id/iv_tab_me"
+                        android:text="@string/tab_me" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ViewStub
+            android:id="@+id/layout_locker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/app_layout_locker" />
+</FrameLayout>

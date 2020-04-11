@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.RoundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginBottom="@dimen/change_42px">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:orientation="vertical"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:paddingLeft="@dimen/change_36px"
+                                                       android:paddingRight="@dimen/change_36px"
+                                                       android:paddingBottom="@dimen/change_36px"
+                                                       android:background="#33244e75">
+
+        <TextView
+                android:id="@+id/tv_cntdaily_item_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_45px"
+                android:layout_alignBottom="@id/view"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#c8e8ff"
+                android:text="Today's fortune"/>
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_3px"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/change_150px"
+                android:background="#33244e75"/>
+
+        <TextView
+                android:id="@+id/tv_cntdaily_item_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#66c8e8ff"
+                android:textSize="@dimen/change_36px"
+                android:layout_marginTop="@dimen/change_36px"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                android:lineSpacingExtra="@dimen/change_9px"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.palmapp.master.baselib.view.RoundLayout>

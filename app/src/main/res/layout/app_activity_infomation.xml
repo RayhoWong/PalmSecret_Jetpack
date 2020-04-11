@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:id="@+id/layout_root"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:focusable="true"
+                                                   android:background="@mipmap/app_information_pic_bg">
+
+
+
+    <ImageView
+            android:id="@+id/iv_app_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/app_information_pic_portrait"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/change_200px"
+            />
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#33c8e8ff"
+            android:layout_marginLeft="@dimen/change_90px"
+            android:layout_marginRight="@dimen/change_90px"
+            android:layout_marginTop="@dimen/change_132px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:text="@string/info_des"
+            android:textSize="@dimen/change_33px"
+            app:layout_constraintTop_toBottomOf="@+id/iv_app_portrait"
+            android:id="@+id/app_textview"/>
+
+    <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et1"
+            app:layout_constraintBottom_toBottomOf="@id/et1"
+            android:layout_marginLeft="@dimen/change_108px"
+            android:src="@mipmap/app_information_ic_name"/>
+
+    <EditText
+            android:id="@+id/et1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/info_name"
+            android:layout_marginTop="@dimen/change_78px"
+            android:layout_marginRight="@dimen/change_60px"
+            app:layout_constraintTop_toBottomOf="@+id/app_textview"
+            android:background="@drawable/app_shape_underline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColorHint="#33c8e8ff"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:imeOptions="actionDone"
+            android:textColor="#c8e8ff"
+            android:layout_marginLeft="@dimen/change_60px"
+            app:layout_constraintStart_toEndOf="@+id/iv1"/>
+
+    <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et2"
+            app:layout_constraintBottom_toBottomOf="@id/et2"
+            android:layout_marginLeft="@dimen/change_108px"
+            android:src="@mipmap/app_information_ic_birthday"/>
+
+    <TextView
+            android:id="@+id/et2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_36px"
+            android:layout_marginRight="@dimen/change_60px"
+            app:layout_constraintTop_toBottomOf="@+id/et1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:editable="false"
+            android:background="@drawable/app_shape_underline"
+            android:textColorHint="#33c8e8ff"
+            android:textColor="#c8e8ff"
+            android:layout_marginLeft="@dimen/change_60px"
+            app:layout_constraintStart_toEndOf="@+id/iv2"/>
+
+    <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et3"
+            app:layout_constraintBottom_toBottomOf="@id/et3"
+            android:layout_marginLeft="@dimen/change_108px"
+            android:src="@mipmap/app_information_ic_constellation"/>
+
+    <TextView
+            android:id="@+id/et3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_36px"
+            android:layout_marginRight="@dimen/change_60px"
+            app:layout_constraintTop_toBottomOf="@+id/et2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/app_shape_underline"
+            android:textColorHint="#33c8e8ff"
+            android:editable="false"
+            android:textColor="#c8e8ff"
+            android:layout_marginLeft="@dimen/change_60px"
+            app:layout_constraintStart_toEndOf="@+id/iv3"/>
+
+    <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_appinfo_male"
+            app:layout_constraintBottom_toBottomOf="@id/tv_appinfo_male"
+            android:layout_marginLeft="@dimen/change_108px"
+            android:src="@mipmap/app_information_ic_gender"/>
+
+    <TextView
+            android:id="@+id/tv_appinfo_male"
+            android:layout_width="@dimen/change_270px"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/change_36px"
+            android:textColor="#c8e8ff"
+            android:textSize="@dimen/change_36px"
+            android:drawableLeft="@drawable/app_selector_info_gender"
+            android:text="@string/info_male"
+            app:layout_constraintStart_toStartOf="@id/et3"
+            app:layout_constraintTop_toBottomOf="@+id/et3"
+            android:layout_marginTop="@dimen/change_56px"/>
+
+    <TextView
+            android:id="@+id/tv_appinfo_female"
+            android:layout_width="@dimen/change_270px"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/change_36px"
+            android:textColor="#c8e8ff"
+            android:textSize="@dimen/change_36px"
+            android:drawableLeft="@drawable/app_selector_info_gender"
+            android:text="@string/info_female"
+            android:layout_marginLeft="@dimen/change_30px"
+            app:layout_constraintStart_toEndOf="@id/tv_appinfo_male"
+            app:layout_constraintTop_toBottomOf="@+id/et3"
+            android:layout_marginTop="@dimen/change_56px"/>
+
+    <TextView
+            android:id="@+id/tv_app_next"
+            android:layout_width="@dimen/change_642px"
+            android:layout_height="@dimen/change_150px"
+            android:textSize="@dimen/change_45px"
+            android:gravity="center"
+            android:background="@drawable/app_selector_info_btn"
+            android:textColor="@drawable/app_selector_textnext_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/change_120px"
+            app:layout_constraintTop_toBottomOf="@id/iv4"
+            android:enabled="false"
+            android:text="@string/info_next"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

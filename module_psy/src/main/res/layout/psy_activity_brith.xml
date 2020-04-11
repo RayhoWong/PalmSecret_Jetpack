@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/star_bg"
+    android:orientation="vertical"
+    tools:context=".heartrate.BirthActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/life_titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/layout_title_bar_transparent" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/psy_imageview"
+        android:layout_width="@dimen/change_984px"
+        android:layout_height="@dimen/change_600px"
+        android:layout_marginTop="@dimen/change_12px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/life_titlebar_layout"
+        app:srcCompat="@mipmap/heart_birthday_pic" />
+
+    <TextView
+        android:id="@+id/psy_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginTop="@dimen/change_60px"
+        android:text="@string/heartrate_dear_user"
+        android:textColor="#c4e8fe"
+        android:textSize="@dimen/change_54px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/psy_imageview" />
+
+    <TextView
+        android:id="@+id/psy_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/change_48px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:lineSpacingExtra="@dimen/change_12px"
+        android:paddingRight="@dimen/change_200px"
+        android:text="@string/heartrate_birth_input_tip"
+        android:textColor="@color/color_66c8e8ff"
+        android:textSize="@dimen/change_36px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/psy_textview"
+        app:layout_constraintTop_toBottomOf="@+id/psy_textview" />
+
+    <TextView
+        android:id="@+id/psy_textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/change_54px"
+        android:text="@string/info_birthday"
+        android:textColor="#33c4e8fe"
+        android:textSize="@dimen/change_30px"
+        app:layout_constraintStart_toStartOf="@+id/psy_textview2"
+        app:layout_constraintTop_toBottomOf="@+id/psy_textview2" />
+
+    <TextView
+        android:id="@+id/tv_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/change_108px"
+        android:layout_marginLeft="@dimen/change_48px"
+        android:layout_marginRight="@dimen/change_48px"
+        android:background="@drawable/me_shape_underline"
+        android:gravity="center_vertical"
+        tools:text="2019-5-31"
+        android:textColor="#c4e8fe"
+        android:textSize="@dimen/change_42px"
+        app:layout_constraintStart_toStartOf="@+id/psy_textview2"
+        app:layout_constraintTop_toBottomOf="@+id/psy_textview3" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="@dimen/change_642px"
+        android:layout_height="@dimen/change_150px"
+        android:layout_marginTop="@dimen/change_210px"
+        android:background="@drawable/bg_round_gradient_theme"
+        android:gravity="center"
+        android:text="@string/heartrate_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/change_48px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_birthday" />
+
+    <ImageView
+        android:id="@+id/psy_imageview2"
+        android:layout_width="@dimen/change_48px"
+        android:layout_height="@dimen/change_48px"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_birthday"
+        app:layout_constraintEnd_toEndOf="@+id/tv_birthday"
+        app:layout_constraintTop_toTopOf="@+id/tv_birthday"
+        app:srcCompat="@mipmap/me_information_ic_more" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

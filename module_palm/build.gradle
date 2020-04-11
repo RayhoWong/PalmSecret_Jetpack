@@ -1,0 +1,74 @@
+if (!isNeedPalmModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        if (!isNeedPalmModule.toBoolean()) {
+            applicationId "com.palmapp.master.module_palm"
+        }
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName "1.0"
+
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion
+        //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+    sourceSets {
+        debug {
+            if (isNeedPalmModule.toBoolean()) {
+                setRoot 'src/main'
+                kotlin.srcDirs = ['main/java']
+            }
+        }
+    }
+// 变老项目设置需要
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+    packagingOptions {
+        exclude '**/commerceutils-svnlog.properties'
+    }
+    resourcePrefix "palm_"
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation project(':baselib')
+    implementation project(':module_network')
+    implementation project(':module_oldlib')
+    implementation project(':module_stasm')
+    implementation project(':module_ad')
+    implementation project(':module_camera')
+    implementation project(':module_imageloader')
+    kapt rootProject.ext.arouter_compiler
+}

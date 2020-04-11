@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="payment_mainText">
+        <item name="android:textSize">@dimen/change_45px</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="payment_six_mainText_big">
+        <item name="android:textColor">#ffe11b</item>
+        <item name="android:textSize">@dimen/change_105px</item>
+    </style>
+
+    <style name="payment_six_mainText_small">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/change_48px</item>
+    </style>
+
+    <style name="payment_six_button">
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+</resources>

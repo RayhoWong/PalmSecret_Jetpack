@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+            android:id="@+id/layout_titlebar"
+            layout="@layout/layout_title_bar"
+            />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/diamond_bg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_palmresult_lefthand"
+                        app:giv_radius="@dimen/change_36px"
+                        android:src="@mipmap/placeholder_default"
+                        android:layout_width="@dimen/change_240px"
+                        android:layout_height="@dimen/change_240px"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:layout_marginTop="@dimen/change_72px"
+                        app:layout_constraintEnd_toStartOf="@id/iv_palmresult_score"/>
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_palmresult_righthand"
+                        app:giv_radius="@dimen/change_36px"
+                        android:src="@mipmap/placeholder_default"
+                        android:layout_width="@dimen/change_240px"
+                        android:layout_height="@dimen/change_240px"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintStart_toEndOf="@id/iv_palmresult_score"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageView
+                        android:id="@+id/iv_palmresult_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintStart_toEndOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintEnd_toStartOf="@id/iv_palmresult_righthand"
+                        android:src="@mipmap/palm_hand_matching_pic_matching"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/change_50px"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        app:layout_constraintTop_toTopOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintStart_toEndOf="@id/iv_palmresult_lefthand"
+                        app:layout_constraintEnd_toStartOf="@id/iv_palmresult_righthand"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_palmresult_fitness"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:drawablePadding="@dimen/change_18px"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/iv_palmresult_lefthand"
+                        android:layout_marginTop="@dimen/change_72px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_hand_matching_result_ic_fittness"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:text="@string/palm_palmmatch_fitness"/>
+
+                <com.palmapp.master.module_palm.PalmProgressView
+                        android:layout_width="@dimen/change_324px"
+                        android:layout_height="@dimen/change_174px"
+                        android:id="@+id/progress_palm1"
+                        app:palm_startColor="#ff56cd"
+                        app:palm_endColor="#ff3787"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_fitness"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/progress_palm2"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_palmresult_intimacy"
+                        android:text="@string/palm_palmmatch_intimacy"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/progress_palm1"
+                        app:layout_constraintStart_toStartOf="@id/progress_palm1"
+                        app:layout_constraintEnd_toEndOf="@id/progress_palm1"
+                        android:layout_marginTop="@dimen/change_25px"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_suitable"
+                        android:text="@string/palm_palmmatch_suitable"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/progress_palm2"
+                        app:layout_constraintStart_toStartOf="@id/progress_palm2"
+                        app:layout_constraintEnd_toEndOf="@id/progress_palm2"
+                        android:layout_marginTop="@dimen/change_25px"/>
+
+                <com.palmapp.master.module_palm.PalmProgressView
+                        android:layout_width="@dimen/change_324px"
+                        android:layout_height="@dimen/change_174px"
+                        android:id="@+id/progress_palm2"
+                        app:palm_startColor="#3dbdff"
+                        app:palm_endColor="#623dff"
+                        app:layout_constraintTop_toTopOf="@id/progress_palm1"
+                        app:layout_constraintStart_toEndOf="@id/progress_palm1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_palmresult_marriage"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:drawablePadding="@dimen/change_18px"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_intimacy"
+                        android:layout_marginTop="@dimen/change_60px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_hand_matching_result_ic_marriage"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:text="@string/palm_palmmatch_age"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_marriage"
+                        android:textSize="@dimen/change_60px"
+                        android:textColor="#ffbb59"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_children"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:drawablePadding="@dimen/change_18px"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_age"
+                        android:layout_marginTop="@dimen/change_60px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_hand_matching_result_ic_baby"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:text="@string/palm_palmmatch_children"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_baby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_children"
+                        android:textSize="@dimen/change_60px"
+                        android:textColor="@color/theme_text_color"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_explanation"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:drawablePadding="@dimen/change_18px"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_baby"
+                        android:layout_marginTop="@dimen/change_60px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/palm_hand_matching_result_ic_full"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/theme_text_color"
+                        android:text="@string/palm_palmmatch_explanation"/>
+
+                <TextView
+                        android:id="@+id/tv_palmresult_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/change_36px"
+                        android:layout_marginLeft="@dimen/change_48px"
+                        android:layout_marginRight="@dimen/change_45px"
+                        android:lineSpacingExtra="@dimen/change_9px"
+                        app:layout_constraintTop_toBottomOf="@id/tv_palmresult_explanation"
+                        android:textSize="@dimen/change_36px"
+                        android:textColor="@color/_66theme_text_color"
+                        android:layout_marginBottom="@dimen/change_60px"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.palmapp.master.baselib.view.PalmBlurView
+                android:id="@+id/palm_blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

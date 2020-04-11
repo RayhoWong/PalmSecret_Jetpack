@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="@dimen/change_216px"
+            android:layout_height="@dimen/change_156px"
+            android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+                android:id="@+id/rl_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_18px"
+                android:layout_marginRight="@dimen/change_24px"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/home_selector_tab_plam">
+
+            <ImageView
+                    android:id="@+id/iv_icon"
+                    android:src="@mipmap/home_ic_plam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/iv_free"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/home_pic_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/tv_tabname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Psychological"
+            android:layout_marginTop="@dimen/change_3px"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/change_36px"
+            android:textColor="#c8e8ff"/>
+
+</LinearLayout>

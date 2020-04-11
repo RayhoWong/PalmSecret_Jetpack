@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/rl_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/iv_close"
+                android:src="@mipmap/tarot_dialog_ic_cancel"
+                android:layout_marginTop="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_gravity="right"
+                android:layout_width="@dimen/change_90px"
+                android:layout_height="@dimen/change_90px"/>
+
+        <TextView
+                android:id="@+id/tv_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_30px"
+                android:lineSpacingExtra="@dimen/change_6px"
+                android:layout_gravity="center_horizontal"
+                tools:text="Type of Your Love"
+                android:textStyle="bold"
+                android:textSize="@dimen/change_48px"
+                android:textColor="@color/theme_text_color"/>
+
+
+        <com.palmapp.master.baselib.view.RoundImageView
+                android:id="@+id/iv_replace"
+                tools:src="@mipmap/tarot_2"
+                app:radius="@dimen/change_24px"
+                android:layout_marginTop="@dimen/change_66px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/change_648px"
+                android:layout_height="@dimen/change_1072px"/>
+
+
+        <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_90px"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:src="@mipmap/tarot_dialog_pic_title_left"
+                    android:layout_width="@dimen/change_96px"
+                    android:layout_height="@dimen/change_66px"/>
+
+            <TextView
+                    android:id="@+id/tv_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_36px"
+                    android:layout_marginRight="@dimen/change_36px"
+                    android:lineSpacingExtra="@dimen/change_6px"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/change_42px"
+                    android:textColor="@color/theme_text_color"/>
+
+            <ImageView
+                    android:src="@mipmap/tarot_dialog_pic_title_right"
+                    android:layout_width="@dimen/change_96px"
+                    android:layout_height="@dimen/change_66px"/>
+
+        </LinearLayout>
+
+
+        <TextView
+                android:id="@+id/tv_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/change_60px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:lineSpacingExtra="@dimen/change_6px"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@color/theme_text_color"/>
+
+
+        <TextView
+                android:id="@+id/tv_card_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_48px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:textSize="@dimen/change_36px"
+                android:textColor="#66c8e8ff"/>
+    </LinearLayout>
+</ScrollView>

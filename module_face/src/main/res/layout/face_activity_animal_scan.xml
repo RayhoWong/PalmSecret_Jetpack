@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.cameraview.CameraView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoFocus="true"
+            app:facing="front" />
+
+    <com.palmapp.master.baselib.view.PhotoEditView
+            android:id="@+id/scanview_animalscan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true"
+            app:PhotoEditView_border="@mipmap/scaning_face_line"
+            app:PhotoEditView_mask="@mipmap/scaning_face_mask" />
+
+    <ImageView
+            android:id="@+id/iv_palmscan_back"
+            android:fitsSystemWindows="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/change_48px"
+            android:src="@mipmap/scaning_ic_back" />
+    <RelativeLayout
+            android:id="@+id/face_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/change_168px"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/face_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@mipmap/scaning_ic_camera" />
+
+        <ImageButton
+                android:id="@+id/face_picture_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/change_174px"
+                android:layout_toLeftOf="@id/face_picture"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@mipmap/scaning_ic_photo" />
+
+        <ImageButton
+                android:id="@+id/ib_change_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/change_174px"
+                android:layout_toRightOf="@id/face_picture"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@mipmap/camera_ic_change" />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/change_57px"
+            android:layout_marginRight="@dimen/change_57px"
+            android:layout_marginBottom="@dimen/change_168px"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_150px"
+                android:layout_marginRight="@dimen/change_28px"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        <Button
+                android:id="@+id/btn_complete"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_150px"
+                android:layout_marginLeft="@dimen/change_28px"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_gradient_theme"
+                android:text="Complete"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+    </LinearLayout>
+    <include android:layout_width="match_parent"
+            android:id="@+id/layout_face_anim"
+            layout="@layout/layout_face_anim"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+</FrameLayout>

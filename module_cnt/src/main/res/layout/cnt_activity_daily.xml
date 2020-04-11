@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/star_bg">
+
+    <include layout="@layout/layout_title_bar_transparent"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_294px">
+
+        <ImageView
+                android:id="@+id/iv_cntdaily_cnt"
+                android:layout_width="@dimen/change_294px"
+                android:layout_height="@dimen/change_294px"
+                android:layout_marginLeft="@dimen/change_48px"
+                android:layout_marginRight="@dimen/change_18px"
+                android:src="@mipmap/ic_gemini"/>
+
+        <TextView
+                android:id="@+id/tv_cntdaily_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#c8e8ff"
+                android:textSize="@dimen/change_54px"
+                android:textStyle="bold"
+                android:layout_above="@id/view"
+                android:layout_marginBottom="@dimen/change_3px"
+                android:layout_toRightOf="@id/iv_cntdaily_cnt"
+                android:text="Gemini"/>
+
+        <TextView
+                android:id="@+id/tv_cntdaily_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#66c8e8ff"
+                android:textSize="@dimen/change_36px"
+                android:layout_below="@id/view"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/change_3px"
+                android:layout_toRightOf="@id/iv_cntdaily_cnt"
+                android:text="Gemini"/>
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:id="@+id/tv_cntdaily_more"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_60px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/change_46px"
+                android:text="@string/more"
+                android:textColor="#66c8e8ff"
+                android:textSize="@dimen/change_30px"
+                android:gravity="center"
+                android:paddingLeft="@dimen/change_24px"
+                android:paddingRight="@dimen/change_24px"
+                android:background="@drawable/cnt_selector_more_bg"/>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_96px"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px">
+
+        <TextView
+                android:id="@+id/tv_cntdaily_today"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_cntdaily_tomorrow"
+                app:layout_constraintWidth_percent="0.285"
+                android:background="@drawable/cnt_selector_day_bg"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@drawable/cnt_selector_day_text_color"
+                android:text="@string/today"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+        <TextView
+                android:id="@+id/tv_cntdaily_tomorrow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@id/tv_cntdaily_today"
+                app:layout_constraintEnd_toStartOf="@id/tv_cntdaily_future"
+                app:layout_constraintWidth_percent="0.285"
+                android:background="@drawable/cnt_selector_day_bg"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@drawable/cnt_selector_day_text_color"
+                android:text="@string/tomorrow"
+                android:gravity="center"
+                />
+
+        <TextView
+                android:id="@+id/tv_cntdaily_future"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@id/tv_cntdaily_tomorrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.285"
+                android:background="@drawable/cnt_selector_day_bg"
+                android:textSize="@dimen/change_36px"
+                android:textColor="@drawable/cnt_selector_day_text_color"
+                android:text="@string/future"
+                android:gravity="center"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/change_48px">
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_cntdaily"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/change_48px"
+                android:paddingRight="@dimen/change_48px"/>
+
+        <com.palmapp.master.baselib.view.NetworkStateView
+                android:id="@+id/network"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            <ImageView
+                    android:id="@+id/bv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cnt_constellation_premium"/>
+
+            <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_pay"
+                    android:layout_width="@dimen/change_642px"
+                    android:layout_height="@dimen/change_150px"
+                    android:text="@string/go_premium"
+                    android:background="@drawable/bg_round_gradient_theme"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    />
+        </RelativeLayout>
+
+        <ViewStub
+                android:id="@+id/viewStub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/cnt_layout_daily_pay"/>
+    </RelativeLayout>
+
+</LinearLayout>

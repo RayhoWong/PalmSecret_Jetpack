@@ -1,0 +1,6 @@
+<resources>
+    <string name="face_app_name" translatable="false">module_face</string>
+
+    <string name="face_hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+</resources>

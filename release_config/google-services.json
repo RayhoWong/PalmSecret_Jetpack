@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "333598439907",
+    "firebase_url": "https://palm-secret.firebaseio.com",
+    "project_id": "palm-secret",
+    "storage_bucket": "palm-secret.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333598439907:android:be1211f3d812d7df",
+        "android_client_info": {
+          "package_name": "com.palmsecret.horoscope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333598439907-cl3mughu8hjht514jcboca69quptqllg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.palmsecret.horoscope",
+            "certificate_hash": "052ae7dd1347e97b03aee56c05a4ebefc5559322"
+          }
+        },
+        {
+          "client_id": "333598439907-1urbj7gu57tonh4ki13v76u8gs9rvvt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANxtzA8WPtpYIA0f97okAcxyAPnZFa0b4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333598439907-1urbj7gu57tonh4ki13v76u8gs9rvvt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

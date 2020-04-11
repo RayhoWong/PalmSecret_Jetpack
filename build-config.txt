@@ -1,0 +1,3 @@
+SVN_LOG_FILE_NAME=svnchangelog-gomusic.txt
+SVN_CODE==
+

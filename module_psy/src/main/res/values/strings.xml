@@ -1,0 +1,7 @@
+<resources>
+<!--    <string name="psy_app_name">module_psy</string>-->
+
+<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="psy_app_name">module_psy</string>
+</resources>

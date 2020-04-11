@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.RoundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginBottom="@dimen/change_42px">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:orientation="vertical"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:paddingLeft="@dimen/change_36px"
+                                                       android:paddingRight="@dimen/change_36px"
+                                                       android:paddingBottom="@dimen/change_36px"
+                                                       android:background="#33244e75">
+
+        <TextView
+                android:id="@+id/tv_cntdaily_item_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_45px"
+                android:layout_alignBottom="@id/view"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#c8e8ff"
+                android:text="Today's fortune"/>
+
+        <ImageView
+                android:id="@+id/iv_cntdaily_item_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cnt_daily_constellation_ic_share"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                android:layout_alignBottom="@id/view"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_3px"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/change_150px"
+                android:background="#33244e75"/>
+
+        <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/love"
+                android:textSize="@dimen/change_36px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rb_cntdaily_item_love"
+                app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_love"
+                app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_love"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:textColor="#c8e8ff"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rb_cntdaily_item_love"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_65px"
+                android:layout_marginLeft="@dimen/change_30px"
+                app:layout_constraintStart_toEndOf="@id/tv1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/change_48px"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/cnt_ratingbar_love"/>
+
+        <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heath"
+                android:textSize="@dimen/change_36px"
+                app:layout_constraintEnd_toEndOf="@id/tv1"
+                app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_health"
+                app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_health"
+                android:textColor="#c8e8ff"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rb_cntdaily_item_health"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_65px"
+                android:layout_marginTop="@dimen/change_36px"
+                app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_love"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/cnt_ratingbar_health"
+                app:layout_constraintStart_toStartOf="@+id/rb_cntdaily_item_love"/>
+
+        <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wealth"
+                android:textSize="@dimen/change_36px"
+                app:layout_constraintEnd_toEndOf="@id/tv1"
+                app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_wealth"
+                app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_wealth"
+                android:textColor="#c8e8ff"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rb_cntdaily_item_wealth"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_65px"
+                app:layout_constraintStart_toStartOf="@id/rb_cntdaily_item_love"
+                android:layout_marginTop="@dimen/change_48px"
+                app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_health"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/cnt_ratingbar_wealth"/>
+
+        <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/career"
+                android:textSize="@dimen/change_36px"
+                app:layout_constraintEnd_toEndOf="@id/tv1"
+                app:layout_constraintTop_toTopOf="@id/rb_cntdaily_item_career"
+                app:layout_constraintBottom_toBottomOf="@id/rb_cntdaily_item_career"
+                android:textColor="#c8e8ff"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rb_cntdaily_item_career"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_65px"
+                app:layout_constraintStart_toStartOf="@id/rb_cntdaily_item_love"
+                android:layout_marginTop="@dimen/change_48px"
+                app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_wealth"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/cnt_ratingbar_career"/>
+
+        <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_3px"
+                app:layout_constraintTop_toBottomOf="@id/rb_cntdaily_item_career"
+                android:layout_marginTop="@dimen/change_48px"
+                android:background="#33244e75"/>
+
+        <TextView
+                android:id="@+id/tv_cntdaily_item_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#66c8e8ff"
+                android:textSize="@dimen/change_36px"
+                android:layout_marginTop="@dimen/change_36px"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                android:lineSpacingExtra="@dimen/change_9px"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.palmapp.master.baselib.view.RoundLayout>

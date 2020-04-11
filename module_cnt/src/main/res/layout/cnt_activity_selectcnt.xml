@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/star_bg">
+
+    <include layout="@layout/layout_title_bar_transparent"/>
+    <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/change_72px"
+            android:layout_marginRight="@dimen/change_72px"
+            android:lineSpacingExtra="@dimen/change_12px"
+            android:text="@string/cnt_select_cnt"
+            android:textColor="@color/_66theme_text_color"
+            android:textSize="@dimen/change_36px"
+            android:layout_marginTop="@dimen/change_6px"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/change_30px"
+            android:gravity="center"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        <ViewStub
+                android:id="@+id/viewStub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/cnt_guide_match"/>
+    </FrameLayout>
+
+</LinearLayout>

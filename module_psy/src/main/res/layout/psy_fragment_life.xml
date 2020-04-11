@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_heartrate_content"
+    android:fadingEdge="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/change_36px"
+        android:paddingTop="@dimen/change_54px"
+        android:paddingRight="@dimen/change_36px"
+        android:paddingBottom="@dimen/change_54px"
+        tools:context=".heartrate.LifeFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heartrate_result_life_cherish_time"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_dear_user"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px">
+
+            <TextView
+                android:id="@+id/tv_heard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heartrate_result_life_heard_you"
+                android:textColor="@color/color_66c8e8ff"
+                android:textSize="@dimen/change_36px" />
+
+            <TextView
+                android:id="@+id/tv_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_heard"
+                android:text="Novermber 02,2094"
+                android:textColor="@color/color_ffbb59"
+                android:textSize="@dimen/change_36px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px">
+
+            <TextView
+                android:id="@+id/tv_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heartrate_result_life_may_live"
+                android:textColor="@color/color_66c8e8ff"
+                android:textSize="@dimen/change_36px" />
+
+            <TextView
+                android:id="@+id/tv_death"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_live"
+                android:text="Novermber 02,2094"
+                android:textColor="@color/color_ffbb59"
+                android:textSize="@dimen/change_36px" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_lefts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_lives_left"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:id="@+id/tv_meals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_meal"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:id="@+id/tv_baths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_bath"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:id="@+id/tv_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_sleep"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:id="@+id/tv_weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_week"
+            android:textColor="@color/color_66c8e8ff"
+            android:textSize="@dimen/change_36px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_45px"
+            android:text="@string/heartrate_result_life_care_yourself"
+            android:textColor="#c4e8fe"
+            android:textSize="@dimen/change_36px" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

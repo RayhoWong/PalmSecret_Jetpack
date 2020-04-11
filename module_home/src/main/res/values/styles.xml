@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="home_MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/change_36px</item>
+        <item name="android:textColor">#c8e8ff</item>
+    </style>
+
+</resources>

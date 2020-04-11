@@ -1,0 +1,34 @@
+<resources>
+
+    <!--底部导航栏的字体样式-->
+    <style name="app_MyBottomNavigationBarTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/change_30px</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.StartUp">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/splash_bg</item>
+    </style>
+
+
+    <style name="app_bottomnavigation_tab_rl">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/change_21px</item>
+        <item name="android:paddingRight">@dimen/change_21px</item>
+        <item name="android:paddingTop">@dimen/change_12px</item>
+    </style>
+
+
+    <style name="app_bottomnavigation_tab_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/change_30px</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/app_selector_bottom_navigation</item>
+    </style>
+
+
+</resources>

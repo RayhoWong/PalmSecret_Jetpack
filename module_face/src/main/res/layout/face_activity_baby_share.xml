@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@mipmap/share_baby_pic0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layout_content"
+                android:layout_alignBottom="@id/layout_content" />
+
+            <FrameLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="48px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/share_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_me"
+                        android:layout_width="216px"
+                        android:layout_height="216px"
+                        android:src="@mipmap/ic_gemini"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="54px"
+                            android:textColor="@color/theme_text_color"
+                            android:text="Tom Sawyer"
+                            android:layout_marginLeft="18px"/>
+
+                        <TextView
+                            android:id="@+id/tv_user_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="36px"
+                            android:textColor="@color/_66theme_text_color"
+                            android:text="Gemini"
+                            android:layout_marginLeft="18px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:maxLines="2"
+                    android:layout_marginLeft="60px"
+                    android:lineSpacingExtra="9px"
+                    android:layout_width="522px"
+                    android:layout_marginTop="270px"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/white"
+                    android:textSize="72px"
+                    android:text="@string/share_baby_title"/>
+
+
+                    <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_after"
+                        app:giv_shape="oval"
+                        app:giv_measure="width"
+                        android:layout_marginLeft="12px"
+                        android:layout_marginTop="516px"
+                        android:layout_width="840px"
+                        android:layout_height="840px"
+                        android:scaleType="centerCrop"/>
+
+
+                    <RelativeLayout
+                        android:layout_below="@id/tv_title"
+                        android:layout_width="462px"
+                        android:layout_marginTop="366px"
+                        android:layout_marginRight="12px"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/share_baby_pic1"
+                        android:layout_height="384px">
+
+                        <com.palmapp.master.baselib.view.PalmImageView
+                            android:id="@+id/iv_left"
+                            app:giv_shape="oval"
+                            app:giv_measure="width"
+                            android:layout_marginTop="24px"
+                            android:layout_marginLeft="24px"
+                            android:layout_width="198px"
+                            android:layout_height="198px"
+                            android:scaleType="centerCrop"/>
+
+                        <com.palmapp.master.baselib.view.PalmImageView
+                            android:id="@+id/iv_right"
+                            app:giv_shape="oval"
+                            app:giv_measure="width"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="132px"
+                            android:layout_marginRight="23px"
+                            android:layout_width="228px"
+                            android:layout_height="228px"
+                            android:scaleType="centerCrop"/>
+
+                    </RelativeLayout>
+
+
+                <TextView
+                    android:layout_marginTop="1413px"
+                    android:layout_marginLeft="72px"
+                    android:layout_marginRight="72px"
+                    android:background="@drawable/bg_shape_retengle"
+                    android:textSize="42px"
+                    android:textStyle="bold"
+                    android:padding="18px"
+                    android:textColor="@color/white"
+                    android:text="@string/share_baby_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="1523px"
+                    android:layout_marginLeft="72px"
+                    android:layout_marginRight="72px"
+                    android:background="@drawable/bg_shape_retengle"
+                    android:textSize="42px"
+                    android:textStyle="bold"
+                    android:padding="18px"
+                    android:textColor="@color/white"
+                    android:text="@string/share_download2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/iv_gang"
+                    android:layout_width="45px"
+                    android:layout_height="45px"
+                    android:layout_marginLeft="72px"
+                    android:layout_marginTop="1652px"
+                    android:src="@mipmap/share_old_ic_text" />
+
+                <TextView
+                    android:id="@+id/tv_download"
+                    android:layout_width="780px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="132px"
+                    android:layout_marginTop="1652px"
+                    android:layout_marginRight="72px"
+                    android:lineSpacingExtra="15px"
+                    android:text="@string/share_download"
+                    android:textColor="#66c8e8ff"
+                    android:textSize="36px"
+                    android:textStyle="bold|italic" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </FrameLayout>

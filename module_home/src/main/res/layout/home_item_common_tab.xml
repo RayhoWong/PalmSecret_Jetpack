@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/change_42px">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/change_306px"
+            android:paddingLeft="@dimen/change_153px"
+            android:orientation="vertical"
+            android:background="@drawable/home_bg_constellation_item">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_45px"
+                android:layout_marginLeft="@dimen/change_201px"
+                android:text="Gemini"
+                android:textSize="@dimen/change_42px"
+                android:textColor="#c8e8ff"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/change_9px"
+                android:layout_marginRight="@dimen/change_48px"
+                android:layout_marginTop="@dimen/change_18px"
+                android:layout_marginLeft="@dimen/change_201px"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#66c8e8ff"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/change_48px"
+            android:layout_gravity="right">
+        <TextView
+                android:id="@+id/tv_coming"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_48px"
+                android:visibility="invisible"
+                android:background="@drawable/bg_shape_comingsoon"
+                android:gravity="center"
+                android:paddingLeft="@dimen/change_24px"
+                android:paddingRight="@dimen/change_24px"
+                android:text="Coming Soon"
+                android:textStyle="bold"
+                android:textSize="@dimen/change_27px"
+                android:layout_gravity="right"
+                android:textColor="@color/white"/>
+        <TextView
+                android:id="@+id/tv_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/change_48px"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_shape_count_down"
+                android:gravity="center"
+                android:paddingLeft="@dimen/change_24px"
+                android:paddingRight="@dimen/change_24px"
+                android:text="00:00:05"
+                android:textStyle="bold"
+                android:textSize="@dimen/change_27px"
+                android:textColor="@color/white"/>
+
+        <ImageView
+                android:id="@+id/iv_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="invisible"
+                android:src="@mipmap/home_lock_ic_premium"/>
+    </FrameLayout>
+
+    <ImageView
+            android:id="@+id/iv_icon"
+            android:src="@mipmap/home_pic"
+            android:layout_width="@dimen/change_306px"
+            android:layout_height="@dimen/change_306px"/>
+
+</FrameLayout>

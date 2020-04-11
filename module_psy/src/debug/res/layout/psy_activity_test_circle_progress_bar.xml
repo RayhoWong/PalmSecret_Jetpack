@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestCircleProgressBarActivity">
+
+
+    <com.palmapp.master.baselib.view.RoundProgress
+        android:id="@+id/round_progress_bar"
+        android:layout_width="@dimen/change_612px"
+        android:layout_height="@dimen/change_612px"
+        android:layout_centerInParent="true"
+        app:bgColor="@color/color_33244e75"
+        app:roundWidth="@dimen/change_76px"
+        app:progressRoundWidth="@dimen/change_24px" />
+
+
+</RelativeLayout>

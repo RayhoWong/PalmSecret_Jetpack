@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       android:orientation="vertical"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:paddingBottom="@dimen/change_90px"
+            >
+
+        <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/pay_two_premium_pic_top"
+                android:scaleType="fitXY"/>
+
+        <ImageView
+                android:id="@+id/iv_payment_close"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/change_66px"
+                android:layout_height="@dimen/change_66px"
+                android:src="@mipmap/pay_two_premium_ic_close"
+                android:visibility="invisible"
+                android:layout_marginLeft="@dimen/change_60px"
+                android:layout_marginTop="@dimen/change_60px"/>
+
+        <TextView
+                android:id="@+id/tv_payment_title1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="GET YOUR FREE TRIAL NOW!"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/change_150px"
+                android:layout_marginRight="@dimen/change_150px"
+                android:layout_marginTop="@dimen/change_84px"
+                android:textSize="@dimen/change_72px"
+                />
+
+        <com.palmapp.master.baselib.view.WrapContentViewPager
+                android:id="@+id/viewpager_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/change_45px"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_title1"
+                app:layout_goneMarginTop="@dimen/change_186px"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/change_36px"
+                android:paddingRight="@dimen/change_36px"
+                android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+                android:id="@+id/layout_payment_indicator"
+                app:layout_constraintTop_toBottomOf="@id/viewpager_payment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/change_18px"
+                android:gravity="center"
+                android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/view_payment_btn1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_payment_indicator"
+                app:layout_constraintWidth_percent="0.85"
+                android:layout_marginTop="@dimen/change_24px"
+                android:background="@drawable/pay_selector_two_btn_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/iv_payment_checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pay_selector_two_checkbox"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="@drawable/pay_selector_two_textcolor"
+                        android:textSize="@dimen/change_48px"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_subtext1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="#82cebb"
+                        android:textSize="@dimen/change_27px"
+                        android:layout_marginRight="@dimen/change_72px"
+                        android:visibility="gone"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/view_payment_btn2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_payment_btn1"
+                app:layout_constraintWidth_percent="0.85"
+                android:layout_marginTop="@dimen/change_60px"
+                android:gravity="center_vertical"
+                android:background="@drawable/pay_selector_two_btn_bg"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/iv_payment_checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pay_selector_two_checkbox"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_66px"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="@drawable/pay_selector_two_textcolor"
+                        android:textSize="@dimen/change_48px"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_payment_btn_subtext2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Month: 25.99/month"
+                        android:textColor="#82cebb"
+                        android:textSize="@dimen/change_27px"
+                        android:layout_marginRight="@dimen/change_72px"
+                        android:visibility="gone"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_payment_continue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/change_180px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_payment_btn2"
+                app:layout_constraintWidth_percent="0.85"
+                android:layout_marginTop="@dimen/change_60px"
+                android:textSize="@dimen/change_60px"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_round_gradient_theme"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

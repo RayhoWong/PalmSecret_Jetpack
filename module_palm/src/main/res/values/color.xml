@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="palm_red">#ff4362</color>
+    <color name="palm_blue">#007dc4</color>
+    <color name="palm_green">#00ab89</color>
+
+    <color name="palm_text_color">#c8e8ff</color>
+</resources>

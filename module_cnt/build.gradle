@@ -1,0 +1,65 @@
+if (!isNeedCntModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        if (!isNeedCntModule.toBoolean()) {
+            applicationId "com.palmapp.master.module_cnt"
+        }
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+
+    sourceSets {
+        debug{
+            if (isNeedCntModule.toBoolean()) {
+                setRoot 'src/main'
+                kotlin.srcDirs=['main/java']
+            }
+        }
+    }
+
+
+    packagingOptions {
+        exclude '**/commerceutils-svnlog.properties'
+    }
+    resourcePrefix "cnt_"
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':baselib')
+    implementation project(':module_network')
+    implementation project(':module_ad')
+    kapt rootProject.ext.arouter_compiler
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+}

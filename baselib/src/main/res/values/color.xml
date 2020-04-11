@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_bar">#082e4b</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <color name="accent">#4CAF50</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#727272</color>
+
+    <color name="theme_bg">#244e75</color>
+    <color name="_33theme_bg">#33244e75</color>
+    <color name="_66theme_bg">#66244e75</color>
+    <color name="_cctheme_bg">#cc244e75</color>
+
+    <color name="theme_text_color">#c8e8ff</color>
+    <color name="_66theme_text_color">#66c8e8ff</color>
+    <color name="_33theme_text_color">#33c8e8ff</color>
+    <color name="_4c000000">#4c000000</color>
+
+    <color name="color_0bc88c">#0bc88c</color>
+    <color name="color_187edc">#187edc</color>
+
+    <color name="color_ff56cd">#ff56cd</color>
+    <color name="color_ff3787">#ff3787</color>
+
+    <color name="color_3dbdff">#3dbdff</color>
+    <color name="color_623dff">#623dff</color>
+
+    <color name="color_aa37fc">#aa37f3</color>
+    <color name="color_6c37fc">#6c37fc</color>
+
+    <color name="color_ffbb59">#ffbb59</color>
+    <color name="color_fc774c">#fc774c</color>
+
+    <color name="color_c8e8ff">#c8e8ff</color>
+    <color name="color_33c8e8ff">#33c8e8ff</color>
+    <color name="color_d5ebfd">#d5ebfd</color>
+
+    <color name="colorOverlay">#33ffffff</color>
+
+    <color name="color_1a244e75">#1a244e75</color>
+
+    <color name="color_cc000000">#cc000000</color>
+
+    <color name="color_66000000">#66000000</color>
+
+</resources>

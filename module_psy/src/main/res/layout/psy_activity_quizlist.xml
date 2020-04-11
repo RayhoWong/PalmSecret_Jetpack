@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/diamond_bg"
+              android:gravity="center">
+
+    <include
+            android:id="@+id/layout_psyquiz_title"
+            layout="@layout/layout_title_bar"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        <com.palmapp.master.baselib.view.NoScrollViewPager
+                android:id="@+id/viewpager_psyquiz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/change_48px"
+                android:paddingRight="@dimen/change_48px"
+                android:layout_marginTop="@dimen/change_48px"
+                android:clipToPadding="false"/>
+
+        <com.palmapp.master.baselib.view.NetworkStateView
+                android:id="@+id/network"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_psyquiz_previous"
+            android:layout_width="@dimen/change_642px"
+            android:layout_height="@dimen/change_150px"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/psy_bg_quiz_previous"
+            android:layout_marginTop="@dimen/change_102px"
+            android:layout_marginBottom="@dimen/change_102px">
+
+        <TextView
+                android:id="@+id/tv_psyquiz_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/change_49px"
+                android:drawablePadding="@dimen/change_30px"
+                android:textColor="@color/white"
+                android:text="@string/psy_previous"
+                android:drawableLeft="@mipmap/psy_test_ic_previous"
+                />
+    </LinearLayout>
+
+
+</LinearLayout>

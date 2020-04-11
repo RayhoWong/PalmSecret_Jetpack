@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682390399798",
+    "firebase_url": "https://plamapp123.firebaseio.com",
+    "project_id": "plamapp123",
+    "storage_bucket": "plamapp123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682390399798:android:d09aa3cc4d0b48e4",
+        "android_client_info": {
+          "package_name": "com.palm.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682390399798-c8jrjr209rcluf6te12arivq9q6ahcou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMKLlC8tIM2Y3b5vOncn-sPqa4DvMgGEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682390399798-c8jrjr209rcluf6te12arivq9q6ahcou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

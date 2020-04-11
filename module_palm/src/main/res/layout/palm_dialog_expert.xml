@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="15dp"
+            app:realtimeOverlayColor="#99000000" />
+
+    <LinearLayout
+            android:layout_width="@dimen/change_840px"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/change_80px"
+                android:layout_height="@dimen/change_80px"
+                android:layout_marginBottom="@dimen/change_36px"
+                android:layout_gravity="right"
+                android:src="@mipmap/palm_result_dialog_ic_cancel" />
+        <LinearLayout
+                android:id="@+id/layout_portrait"
+                android:layout_width="@dimen/change_840px"
+                android:layout_height="@dimen/change_240px"
+                android:background="@drawable/palm_bg_countdown"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <FrameLayout
+                    android:layout_width="@dimen/change_162px"
+                    android:layout_height="@dimen/change_162px"
+                    android:layout_marginLeft="@dimen/change_48px">
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/palm_result_pic_portrait_bg" />
+
+                <com.palmapp.master.baselib.view.PalmImageView
+                        android:id="@+id/iv_palm_countdown"
+                        android:layout_width="@dimen/change_142px"
+                        android:layout_height="@dimen/change_142px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/palm_portrait_1"
+                        app:giv_shape="oval" />
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/tv_palm_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/change_48px"
+                    android:layout_marginRight="@dimen/change_48px"
+                    android:lineSpacingExtra="@dimen/change_9px"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/change_36px"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/star_bg"
+        android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <FrameLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px">
+
+        <SurfaceView
+                android:id="@+id/sv_animal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+        <FrameLayout
+                android:id="@+id/layout_vip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/face_animal_vip"
+                    android:scaleType="centerCrop"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/btn_pay"
+                        android:layout_width="@dimen/change_642px"
+                        android:layout_height="@dimen/change_150px"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/change_24px"
+                        android:background="@drawable/bg_round_gradient_theme"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/go_premium"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                <LinearLayout
+                        android:id="@+id/btn_pay_watch"
+                        android:layout_width="@dimen/change_642px"
+                        android:layout_height="@dimen/change_150px"
+                        android:background="@drawable/bg_round_translucent_theme"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/pay_watch_ads_title"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/change_45px" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pay_watch_ads_sub_title"
+                            android:textColor="#80c8e8ff"
+                            android:textSize="@dimen/change_30px" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/change_48px"
+            android:layout_marginTop="@dimen/change_48px"
+            android:layout_marginRight="@dimen/change_48px"
+            android:layout_marginBottom="@dimen/change_48px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/face_animal_human" />
+
+        <SeekBar
+                android:id="@+id/seekbar"
+                style="@style/face_progress_animal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="0"
+                android:progressDrawable="@drawable/face_bg_progress"
+                android:splitTrack="false" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/face_animal_toanimal" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_like_n_share" />
+</LinearLayout>

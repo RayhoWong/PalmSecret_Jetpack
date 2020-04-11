@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.palmapp.master.baselib.view.AlignTopTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:drawableLeft="@mipmap/pay_six_premium_ic_tick"
+        app:drawablePadding="@dimen/change_36px"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="left"
+        android:textColor="#495760"
+        android:textSize="@dimen/change_48px">
+
+</com.palmapp.master.baselib.view.AlignTopTextView>

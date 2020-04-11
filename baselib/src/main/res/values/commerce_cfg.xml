@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/cfg_*,@integer/cfg_*" tools:ignore="MissingTranslation">
+
+
+    <!--********************广告SDK—start********************-->
+    <!-- 广告13接口产品配置:产品ID、数据渠道
+  配置请找[服务器组*黄炯]
+  -->
+    <string name="cfg_commerce_cid">479</string>
+    <string name="cfg_commerce_data_channel">386</string>
+    <!--渠道号 -->
+    <string name="cfg_commerce_channel">200</string>
+    <!--native抓取广告位-->
+    <integer name="cfg_commerce_native_presolve_request_id">486</integer>
+    <!--系统安装抓取广告位-->
+    <integer name="cfg_commerce_system_install_adpos">485</integer>
+
+    <!--入口ID, a.主包(默认):1 b.主题:2 -->
+    <string name="cfg_commerce_entrance_id">1</string>
+
+    <!--离线广告请求接口产品配置:product_key、access_key
+      配置请找[服务器组*黄炯]
+       -->
+    <string name="cfg_commerce_ad_request_product_key">QMT0KB9TCK8ZLMJD3MDCSDM3</string>
+    <string name="cfg_commerce_ad_request_access_key">SJ07K9OK3GFJA0FWUZU79JJADU16DZSJ</string>
+
+    <!--105统计产品ID，主包和主题是分开的
+    新产品配置请找[大数据组*刘晓宏]
+    老产品请看这个页面尾部：http://wiki.3g.net.cn/pages/viewpage.action?pageId=14254166
+    -->
+    <integer name="cfg_commerce_statistic_id_105">483</integer>
+    <!--是否使用输入法旧的统计sdk（输入法外的其它产品配置false）
+    -->
+    <bool name="cfg_commerce_gokeyboard_statistics">false</bool>
+
+
+    <!--小号包传true，大号包传false-->
+    <bool name="cfg_commerce_is_new_url">true</bool>
+    <!--配置自定义的买量域名-->
+    <string name="cfg_commerce_custom_domain">www.palm-secret.com</string>
+    <!--ab配置-->
+    <string name="cfg_commerce_ab_protocol">https://abtest.cpcphone.com/abtestcenter/cfg</string>
+
+</resources>

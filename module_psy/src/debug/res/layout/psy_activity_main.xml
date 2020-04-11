@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+            android:id="@+id/btn_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试题"/>
+
+    <Button
+            android:id="@+id/btn_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试结果"/>
+
+    <Button
+        android:id="@+id/btn_heartrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="心率检测"/>
+
+    <Button
+        android:id="@+id/btn_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="心率进度条"/>
+</LinearLayout>

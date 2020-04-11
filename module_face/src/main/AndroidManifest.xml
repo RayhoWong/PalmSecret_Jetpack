@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.palmapp.master.module_face">
+
+    <application>
+        <activity android:name=".activity.album.AlbumResultActivity"/>
+        <activity android:name=".activity.takephoto.fragment.old.ShowGifActivity" />
+        <activity
+            android:name=".activity.takephoto.TakephotoActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".activity.baby.BabyMatchActivity" />
+        <activity
+            android:name=".activity.baby.BabyTakephotoActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".activity.baby.BabyResultActivity" />
+        <activity android:name=".activity.cartoon.CartoonResultActivity" />
+        <activity
+            android:name=".activity.cartoon.CartoonTakePhotoActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".activity.album.AlbumTakePhotoActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".activity.animal.AnimalScanActivity" android:theme="@style/AppTheme.Fullscreen"/>
+        <activity android:name=".activity.animal.AnimalResultActivity" />
+        <!--        <activity android:name=".activity.old.OldResultActivity" />-->
+    </application>
+
+</manifest>

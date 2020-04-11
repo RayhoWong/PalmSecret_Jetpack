@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.palmapp.master.module_me">
+
+    <application>
+        <activity android:name="com.palmapp.master.infomation.PolicyActivity"/>
+        <activity android:name="com.palmapp.master.infomation.EditInfoActivity"/>
+        <activity android:name="com.palmapp.master.infomation.SettingsActivity"/>
+        <activity android:name="com.palmapp.master.infomation.FeedbackActivity"/>
+    </application>
+
+</manifest>

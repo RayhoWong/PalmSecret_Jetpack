@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragment.ConstellationFragment"
+        android:clipToPadding="false">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_psychology"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/change_48px"
+            android:paddingRight="@dimen/change_48px"
+            android:clipToPadding="false"/>
+    <com.palmapp.master.baselib.view.PalmLoadingView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+</FrameLayout>

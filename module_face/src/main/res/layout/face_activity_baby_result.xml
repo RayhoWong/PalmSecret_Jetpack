@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/star_bg">
+
+        <include layout="@layout/layout_title_bar_transparent" />
+
+        <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_face_left"
+                android:layout_width="@dimen/change_240px"
+                android:layout_height="@dimen/change_240px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:layout_marginRight="@dimen/change_18px"
+                android:background="@drawable/face_ic_baby_bg"
+                android:scaleType="centerCrop"
+                app:giv_shape="oval"
+                app:layout_constraintEnd_toStartOf="@id/iv_face_center"
+                app:layout_constraintTop_toBottomOf="@id/layout_titlebar" />
+
+        <ImageView
+                android:id="@+id/iv_face_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/face_baby_result_pic_connect"
+                app:layout_constraintBottom_toBottomOf="@id/iv_face_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_face_left" />
+
+        <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_face_right"
+                android:layout_width="@dimen/change_240px"
+                android:layout_height="@dimen/change_240px"
+                android:layout_marginLeft="@dimen/change_18px"
+                android:layout_marginTop="@dimen/change_60px"
+                android:background="@drawable/face_ic_baby_bg"
+                android:scaleType="centerCrop"
+                app:giv_shape="oval"
+                app:layout_constraintStart_toEndOf="@id/iv_face_center"
+                app:layout_constraintTop_toBottomOf="@id/layout_titlebar" />
+
+        <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_face_result"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/change_114px"
+                android:scaleType="centerCrop"
+                app:giv_radius="@dimen/change_24px"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_face_left"
+                app:layout_constraintWidth_percent="0.83" />
+
+        <com.palmapp.master.baselib.view.RoundLayout
+                android:id="@+id/layout_face_result"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/change_114px"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_face_left"
+                app:layout_constraintWidth_percent="0.83"
+                app:radius="@dimen/change_24px">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/face_baby_result_pic_baby_premium" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/btn_pay"
+                        android:layout_width="@dimen/change_642px"
+                        android:layout_height="@dimen/change_150px"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_round_gradient_theme"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/go_premium"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                <LinearLayout
+                        android:id="@+id/btn_pay_watch"
+                        android:layout_width="@dimen/change_642px"
+                        android:layout_height="@dimen/change_150px"
+                        android:layout_marginTop="@dimen/change_24px"
+                        android:background="@drawable/bg_round_translucent_theme"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/pay_watch_ads_title"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/change_45px" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pay_watch_ads_sub_title"
+                            android:textColor="#80c8e8ff"
+                            android:textSize="@dimen/change_30px" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.palmapp.master.baselib.view.RoundLayout>
+
+
+        <TextView
+                android:id="@+id/tv_face_boy"
+                android:layout_width="@dimen/change_330px"
+                android:layout_height="@dimen/change_120px"
+                android:layout_marginTop="@dimen/change_50px"
+                android:background="@drawable/face_ic_baby_gray_bg"
+                android:gravity="center"
+                android:text="@string/boy"
+                android:textColor="@drawable/face_tc_baby"
+                android:textSize="@dimen/change_45px"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_face_girl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_face_result"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+                android:id="@+id/tv_face_girl"
+                android:layout_width="@dimen/change_330px"
+                android:layout_height="@dimen/change_120px"
+                android:layout_marginTop="@dimen/change_50px"
+                android:background="@drawable/face_ic_baby_gray_bg"
+                android:gravity="center"
+                android:text="@string/girl"
+                android:textColor="@drawable/face_tc_baby"
+                android:textSize="@dimen/change_45px"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_face_boy"
+                app:layout_constraintTop_toBottomOf="@id/layout_face_result"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <include
+                android:id="@+id/layout_share"
+                layout="@layout/layout_like_n_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/change_24px"
+                android:layout_marginBottom="@dimen/change_24px"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/tv_face_girl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

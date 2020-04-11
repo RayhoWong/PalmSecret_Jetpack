@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style name="AppTheme.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <!--通用dialog的默认样式-->
+    <style name="CommonDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <!--每日塔罗的activity主题-->
+    <style name="DailyTarotTheme" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <!--activity 淡入淡出-->
+    <style name="AnimActivity" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/anim_fade</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="anim_fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_fade_out</item>
+    </style>
+
+    <style name="cnt_style_match_title">
+        <item name="android:textSize">@dimen/change_42px</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/change_24px</item>
+        <item name="android:paddingBottom">@dimen/change_24px</item>
+        <item name="android:textColor">@color/theme_text_color</item>
+    </style>
+</resources>

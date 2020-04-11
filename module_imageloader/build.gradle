@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library' //glide不支持在app下创建
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFile('proguard-rules.pro')
+        }
+    }
+
+    resourcePrefix "imageloader_"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.androidx_appcompat
+
+    implementation (rootProject.ext.glide) {
+        exclude group: "com.android.support"
+    }
+    implementation project(":baselib")
+
+    kapt rootProject.ext.glide_compiler
+}

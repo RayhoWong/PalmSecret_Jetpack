@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.palmapp.master.module_psy">
+
+    <application>
+        <activity android:name=".heartrate.HeartRateReportActivity"></activity>
+        <activity android:name=".heartrate.BirthActivity" />
+        <activity android:name=".heartrate.HeartRateDetectActivity" />
+        <activity android:name=".quiz.QuizActivity" />
+        <activity android:name=".result.QuizResultActivity" />
+    </application>
+
+</manifest>

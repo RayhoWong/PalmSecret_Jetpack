@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="@dimen/change_206px"
+        android:layout_height="@dimen/change_312px">
+
+    <com.palmapp.master.baselib.view.FlipImageView
+            android:id="@+id/iv_card"
+            android:src="@mipmap/tarot_pic_back"
+            app:flipDuration="500"
+            app:isAnimated="true"
+            app:isFlipped="false"
+            app:flipRotations="y"
+            app:flipOnce="true"
+            app:reverseRotation="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

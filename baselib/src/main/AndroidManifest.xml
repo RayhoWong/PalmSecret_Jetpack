@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.palmapp.master.baselib">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="qD_ETVvkH-t5fGbcApv4KRy7REkKxaLmoL_Gru-7ssCV7o7Ha1MvSJ1uXlDTJZE6vDMk5KrxB1RIpTZOZxI1EJ" />
+        <meta-data
+            android:name="applicationId"
+            android:value="${applicationId}" /> <!-- 主常驻进程 此服务要设置exported为true -->
+        <service
+            android:name=".deamon.Service1"
+            android:exported="true" />
+
+        <receiver android:name=".deamon.Receiver1" /> <!-- 辅助进程 -->
+        <service
+            android:name=".deamon.Service2"
+            android:process=":assistant" />
+
+        <receiver
+            android:name=".deamon.Receiver2"
+            android:process=":assistant" /> <!-- 任务服务，必须配置在主常驻进程里 -->
+        <service
+            android:name="b.i.o.j.bycovofeobvjbcbeliebo"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- 开机自动重启Receiver，进程名称要和主常驻进程一致 -->
+        <receiver android:name="b.i.o.j.c.byovofeobvjbcbeliebojb">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <!-- 蓝牙状态变化 -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <!-- WIFI状态变化 -->
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+
+                <!-- 网络连接变化 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 开机广播 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 壁纸变化 -->
+                <action android:name="android.intent.action.WALLPAPER_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="99999">
+
+                <!-- "*#*#开头 #*#*结尾"的拨号 -->
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+
+                <data android:scheme="android_secret_code" />
+            </intent-filter>
+            <intent-filter android:priority="99999">
+
+                <!-- 电话呼出 -->
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+            <intent-filter>
+
+                <!-- SD卡挂载、卸载 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver> <!-- 工具类SDK -->
+        <provider
+            android:name="e.m.z.u.o.w.cunsquzybxyvgepwixpmdpbfpsgxtnk"
+            android:authorities="${applicationId}.commerce.cunsquzybxyvgepwixpmdpbfpsgxtnk"
+            android:exported="false" /> <!-- 买量SDK -->
+        <provider
+            android:name="g.a.r.k.byojxxxuhysaxzrltedwe"
+            android:authorities="${applicationId}.commerce.byojxxxuhysaxzrltedwe"
+            android:exported="false" />
+        <provider
+            android:name="e.a.m.p.Stfcjxcxoasqsvrjsxikvudvbp"
+            android:authorities="${applicationId}.staticsdkprovider"
+            android:exported="false" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

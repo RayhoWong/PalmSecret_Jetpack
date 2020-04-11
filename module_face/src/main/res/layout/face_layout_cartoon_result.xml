@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="@dimen/change_240px"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/change_36px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="@dimen/change_240px"
+            android:layout_height="@dimen/change_240px">
+
+        <com.palmapp.master.baselib.view.PalmImageView
+                android:id="@+id/iv_filter_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/result_filter_pic1"
+                app:giv_radius="@dimen/change_24px" />
+
+        <View
+                android:id="@+id/fl_filter_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/_4c000000"/>
+
+        <ImageView
+                android:id="@+id/fl_filter_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/filter_pic_premium"/>
+        <View
+                android:id="@+id/fl_filter_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/result_filter_pic_selected" />
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/tv_filter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/change_21px"
+            android:text="Charm Purple"
+            android:textColor="@color/white"
+            android:lines="2"
+            android:textSize="@dimen/change_36px"
+            android:textStyle="bold" />
+
+</LinearLayout>

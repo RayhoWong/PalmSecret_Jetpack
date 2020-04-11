@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:clickable="true">
+
+    <com.palmapp.master.baselib.view.PhotoEditView
+        android:id="@+id/face_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:PhotoEditView_border="@mipmap/image_frame_border"
+        app:PhotoEditView_mask="@mipmap/image_frame_mask"/>
+
+
+    <ImageView
+        android:id="@+id/album_takephoto_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/change_48px"
+        android:src="@mipmap/scaning_ic_back" />
+
+
+    <RelativeLayout
+        android:id="@+id/face_takephoto_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/change_186px">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/change_453px"
+            android:layout_height="@dimen/change_150px"
+            android:layout_marginLeft="@dimen/change_59px"
+            android:text="cancel"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/change_48px"
+            android:background="@drawable/bg_round_gradient_theme3" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="@dimen/change_453px"
+            android:layout_height="@dimen/change_150px"
+            android:layout_marginRight="@dimen/change_59px"
+            android:text="complete"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/change_48px"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_round_gradient_theme2" />
+    </RelativeLayout>
+
+
+    <include android:layout_width="match_parent"
+        android:id="@+id/layout_face_anim"
+        layout="@layout/layout_face_anim"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

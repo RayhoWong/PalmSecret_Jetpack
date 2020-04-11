@@ -1,0 +1,198 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.palm.test"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+
+        if (project.hasProperty('iVersionCode')) {
+            versionCode Integer.parseInt(iVersionCode)
+        } else {
+            versionCode rootProject.versionCode
+        }
+
+        if (project.hasProperty('iVersionName')) {
+            versionName iVersionName
+        } else {
+            versionName "1.0"
+        }
+
+        ndk {
+            //选择要添加的对应CPU类型的so
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+            //还可以选择'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        renderscriptTargetApi rootProject.ext.targetSdkVersion //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+    }
+
+    //签名文件不可以随意更改使用
+    signingConfigs {
+        release {
+            keyAlias 'Palm'
+            keyPassword 'PalmTest123'
+            storeFile file('./keystore/keystore.jks')
+            storePassword 'PalmTest'
+        }
+        debug {
+            keyAlias 'GOTeamtest'
+            keyPassword 'GOTeamtest'
+            storeFile file('./keystore/GoTeamTest.keystore')
+            storePassword 'GOTeamtest'
+        }
+    }
+
+    flavorDimensions "tier"
+    productFlavors {
+        playstore {
+            minSdkVersion 16
+            dimension "tier"
+            if (project.hasProperty("channel")) {
+                manifestPlaceholders = [CHANNEL: project['channel'], SVN: project['svn'], ABUSER: project['abUser'], OPENLOG: project['openLog']];
+            } else {
+                manifestPlaceholders = [CHANNEL: "500", PRODUCTION: "true", SVN: "208101", ABUSER: "true", OPENLOG: "true"];
+            }
+        }
+        dev {
+            minSdkVersion 16
+            dimension "tier"
+            if (project.hasProperty("channel")) {
+                manifestPlaceholders = [CHANNEL: project['channel'], SVN: project['svn'], ABUSER: project['abUser'], OPENLOG: project['openLog']];
+            } else {
+                manifestPlaceholders = [CHANNEL: "500", PRODUCTION: "true", SVN: "208101", ABUSER: "true", OPENLOG: "true"];
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            //混淆与否
+            minifyEnabled false
+            //zipalign优化与否
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            //混淆与否
+            minifyEnabled true
+            //zipalign优化与否
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    // 变老项目设置需要
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def channel = project.hasProperty('channel') ? channel : "200"
+            def openlog = project.hasProperty('openLog') ? openLog : "flase"
+            def abuser = project.hasProperty('abUser') ? abUser : ""
+            def svn = project.hasProperty('svn') ? svn : ""
+            def fileName = "defTemp";
+            if (variant.buildType.name.equals("debug")) {
+                fileName = "PalmSecret-debug-vn${defaultConfig.versionName}-vc${defaultConfig.versionCode}_${channel}_svn${svn}_log${openlog}_abuser${abuser}.apk"
+            } else {
+                fileName = "PalmSecret-release-vn${defaultConfig.versionName}-vc${defaultConfig.versionCode}_${channel}_svn${svn}_log${openlog}_abuser${abuser}.apk"
+            }
+            outputFileName = new File("../../", fileName)
+        }
+    }
+
+    packagingOptions {
+        exclude '**/commerceutils-svnlog.properties'
+    }
+    resourcePrefix "app_"
+}
+
+kapt {
+    arguments {
+        arg('eventBusIndex', 'com.palmapp.master.MyEventBusIndex')
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
+dependencies {
+    // firebase
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation "com.google.android.gms:play-services-ads:16.0.0"
+    implementation "com.google.android.gms:play-services-base:16.1.0"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.android.installreferrer:installreferrer:1.1'
+    kapt 'org.greenrobot:eventbus-annotation-processor:3.1.1'
+    kapt rootProject.ext.arouter_compiler
+    implementation project(":baselib")
+    implementation project(":module_imageloader")
+    implementation project(":module_network")
+    implementation project(path: ':module_oldlib')
+
+    compileProject(":module_home", isNeedHomeModule)
+    compileProject(":module_today", isNeedTodayModule)
+    compileProject(":module_me", isNeedMeModule)
+    compileProject(":module_ad", isNeedAdModule)
+    compileProject(":module_face", isNeedFaceModule)
+    compileProject(":module_palm", isNeedPalmModule)
+    compileProject(":module_psy", isNeedPsyModule)
+    compileProject(":module_cnt", isNeedCntModule)
+    compileProject(":module_pay", isNeedPayModule)
+    compileProject(":module_tarot", isNeedTarotModule)
+    compileProject(":module_transform", isNeedTransformModule)
+}
+
+//根据gradle.properties文件中的module配置，决定module是集成模式还是组件模式
+def compileProject(def name, def isLib) {
+    if (isLib.toBoolean()) {
+        delete project(name).buildDir
+        dependencies {
+            implementation project(name)//集成模式
+        }
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

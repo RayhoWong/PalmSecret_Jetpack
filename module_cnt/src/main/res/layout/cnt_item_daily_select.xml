@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center_horizontal"
+              android:layout_height="wrap_content">
+    <ImageView
+            android:id="@+id/iv_cntselect_cnt"
+            android:layout_width="@dimen/change_240px"
+            android:layout_height="@dimen/change_240px"
+            android:src="@mipmap/cnt_constellation_matching_pic_gemini"/>
+
+    <TextView
+            android:id="@+id/tv_cntselect_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c8e8ff"
+            android:layout_marginTop="@dimen/change_3px"
+            android:textSize="@dimen/change_42px"
+            android:text="Gemini"/>
+
+    <TextView
+            android:id="@+id/tv_cntselect_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#66c8e8ff"
+            android:layout_marginTop="@dimen/change_12px"
+            android:textSize="@dimen/change_30px"
+            android:text="Gemini"/>
+</LinearLayout>
